@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>學校特色</title>
+	<style type="text/css">
+	@import"school.css"; /*打自己的CSS檔名*/
+	body{
+		margin:0;
+		font-family:GenRyuMin-M;
+		min-width:1490px;
+	}	
+	img {
+	    width: 100%;
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script type="text/javascript" >  
+	$(window).scroll(function() {/*上方白色清單高度變化*/
+	    if ( $(this).scrollTop() > 100){
+	        // $('.top-list').css({'height':'100px','position':'fixed'});
+	        $('.top-header').addClass(' C-header');
+	        $('.top-list').addClass(' C-top-list');
+	    } else {
+	        $('.top-header').removeClass(' C-header');
+	        $('.top-list').removeClass(' C-top-list');
+	    }
+	});
+	$(window).scroll(function() {/*動畫*/
+	    if ( $(this).scrollTop() > 250 ){
+	        $('.school-pic2').css('display','inline-block');
+	        setTimeout("SC()",1000);
+	    } 
+	    if ( $(this).scrollTop() > 900 ){
+	        $('.person2').css('display','inline-block');
+	    } 
+	    if ( $(this).scrollTop() > 1000 ){
+	        $('.school-pic2').removeClass('school-pic22');
+	        $('.school-pic2').css('display','none');
+	    } 
+	    if ( $(this).scrollTop() > 1300 ){
+	        $('.poster').css('display','inline-block');
+	        $('.music-1').css('display','inline-block');
+	        $('.music-title').css('display','inline-block');
+	         $('.tp').css('display','inline-block');
+	    } 
+	    if ( $(this).scrollTop() > 2200 ){
+	        $('.WI').css('display','inline-block');
+	        $('.bassoon').css('display','inline-block');
+	        $('.windband-1').css('display','inline-block');
+	    } 
+	    if ( $(this).scrollTop() > 2700 ){
+	        $('.windband-2').css('display','inline-block');
+	        $('.windband-word2').css('display','inline-block');
+	    } 
+	    if ( $(this).scrollTop() > 3300 ){
+	        $('.SG').css('display','inline-block');
+	        $('.SG2').css('display','inline-block');
+	        $('.SW').css('display','inline-block');
+	    } 
+	});
+	function SC(){
+		$('.school-pic2').addClass(' school-pic22');
+	}
+	function showW(X){
+		if(X==1){
+			$(".no1W1").css('display','inline-block');
+		}
+		if(X==2){
+			$(".no1W2").css('display','inline-block');
+		}
+		if(X==3){
+			$(".no1W3").css('display','inline-block');
+		}
+	}
+	function hiddenW(X){
+		if(X==1){
+			$(".no1W1").css('display','none');
+		}
+		if(X==2){
+			$(".no1W2").css('display','none');
+		}
+		if(X==3){
+			$(".no1W3").css('display','none');
+		}
+	}
+</script>  
+</head>
+<body>
+	<header>
+	<div class="top-header">
+		<div class="top-list">
+			<div class="dropdown L1">				
+					<a href="school.html"><img src="images/L1.png"></a> <!--特色-->
+			</div>
+			<div class="dropdown L2">				
+					<a href="activities.html"><img src="images/L2.png"></a> <!--活動-->
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin-top:3px;margin-left: -45px">
+						<a class="dropdown-item" href="activities.html#C1" style="color:black;">風雅頌</a>	
+						<a class="dropdown-item" href="activities.html#C2" style="color:black;">音樂廳</a>	
+						<a class="dropdown-item" href="activities.html#C3" style="color:black;">瑞麗堂</a>	
+					</div>
+			</div>
+			<div class="top-logo"><a href="index.html"><img src="images/logo1.png"></a></div>
+			<div class="dropdown L3">				
+					<a href="video.html"><img src="images/L3.png"></a> <!--影片-->
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin-top:3px;margin-left: -45px">
+						<a class="dropdown-item" href="video.html#V1" style="color:black;">影片介紹</a>	
+						<a class="dropdown-item" href="video.html#V2" style="color:black;">影片花絮</a>	
+					</div>
+			</div>
+			<div class="dropdown L4">				
+					<a href="team.html"><img src="images/L4.png"></a> <!--組員-->
+			</div>
+		</div>
+	</div><!--最上面的選單-->
+	</header>
+	<div class="school">
+		<span class="context">學生的光，老師看得見<br>老師的光，上帝看得見<br>校友的光，世界看得見</span>
+		<div class="school-pic"><img src="images/school.jpg"></div>
+		<div class="principal">
+			<img src="images/校長.png">
+		</div>
+		<div style="display: inline-block;">
+			<div class="education"><span>教育宗旨</span></div>
+			<div class="school-pic2"><img src="images/school.png"></div>
+			<img src="images/bottom3.png" class="bottom">
+			<p class="cycu">中原大學教育宗旨在本基督愛世之忱，追求真知力行，以傳啟文化服務世人。教育的最終目的是在培養全人，因此中心即依此目標，秉持對自然與人性的尊重，尋求天人物我間的和諧發展，進而規劃系統性課程與多元性的活動，營造全人之校園文化。</p>
+			<div class="background"><img src="images/002.png"></div>
+		</div>
+		<div class="no1W1">
+			<span class="WN1">107學年度學士班註冊率99.37%</span><br><span class="WN2">榮獲&nbsp;&nbsp;&nbsp;全國公私立綜合大學第一名</span>
+		</div>
+		<div class="no1W2">
+			<span class="WN1">1111人力銀行&nbsp;&nbsp;2019企業最愛大學調查</span><br><span class="WN2">連續三年榮獲&nbsp;&nbsp;&nbsp;私立大學第一名</span>
+		</div>
+		<div class="no1W3">
+			<span class="WN1">世界大學排名中心(CWUR)排名</span><br><span class="WN2">連續五年榮獲&nbsp;&nbsp;&nbsp;台灣私立綜合大學第一名</span>
+		</div>
+		<div class="PN">
+			<!-- <div class="person1"><img src="images/人.png" ></div> -->
+			<div class="person2"><img src="images/人3.png" ></div>
+			<!-- <div class="person3"><img src="images/人.png" ></div> -->
+			<div class="no1">
+				<img src="images/第一名.png" class="no1-pic-1" onmouseover="showW(1)" onmouseout="hiddenW(1)">
+				<img src="images/第一名-2.png" class="no1-pic-11" onmouseover="showW(2)" onmouseout="hiddenW(2)">
+				<img src="images/第一名-3.png" class="no1-pic-11" onmouseover="showW(3)" onmouseout="hiddenW(3)">
+			</div>
+		</div>
+		<div class="tp"><img src="images/tp2.jpg" ></div>
+		<div style="display: inline-block;" class="MU">
+			<div  class="poster"><img src="images/poster.jpg"></div>
+			<div  class="music-1"><img src="images/music.jpg"></div>
+			<div  class="music-1"><img src="images/music2.jpg"></div>
+				<div class="music-title">
+					<span>每周兩次音樂會<br></span>
+					<span class="music-word">創造全國大學校院舉辦年度音樂會場次最高紀錄，全年超過60場次。</span>
+				</div>
+		</div>
+	</div>
+	<img src="images/bassoon.png" class="bassoon">
+	<div class="band">
+		<div class="windband-1"><img src="images/wind-2.jpg"></div>
+		<div class="WI">
+		<span class="windband">管樂社<br></span>
+		<p class="windband-word">中原大學管樂社今年為第八屆，前身是有20屆歷史的中原大學管弦樂社，本校樂團希望凝聚喜愛音樂的同好、興趣者一同參與。目前主要以室內管 樂團型態為主，有鑑於社會音樂風氣日漸普及，在校內多次舉辦音樂活動，以提供校內師生對管樂有興趣者一個優良的學習環境。</p>
+		</div>
+		<div class="windband-2"><img src="images/wind-1.jpg" ></div>
+		<div class="windband-word2">
+		<p>曾榮獲<br>104學年度 全國學生音樂比賽北區  優等<br>105學年度 全國學生音樂比賽北區  特優<br>106學年度 全國學生音樂比賽北區  特優 <br>107學年度 全國學生音樂比賽北區  優等<br><br>104學年度 社團評鑑 音樂性社團 第二名<br>105學年度 社團評鑑 音樂性社團 第一名<br>106學年度 社團評鑑 音樂性社團 第一名</p>
+		</div>
+	</div>
+	<div class="S">
+		<div class="SW">樂器工程<div class="SW2">中原大學樂器工程中心隸屬中原大學音樂產業教育中心，結合校內機械、管理、設計相關系所與業界資源，以樂器產業之研究、創新、傳承為職志，以教育、產學研合作為發展目標。
+		</div></div>
+		<div class="SG"><img src="images/SS.jpg"></div>
+		<div class="SG2"><img src="images/01.png" ></div>
+	</div>
+	<footer class="footer" onmouseover="showF()" onmouseout="hiddenF()">
+		<!-- <div class="F"><img src="images/F3.png"></div> -->
+		<div class="FW">
+			<div class="footer-logo"><!-- <img src="images/logo2.png"> -->Chung Yuan Christian University</div>
+			Copyright © 2019 ChihAn ChiaHsuan ChangHuan YuNung<br>
+			32023 桃園市中壢區中北路二OO號 200 Chung Pei Road, Chung Li District, Taoyuan City, Taiwan 32023, R.O.C. <br>
+			Tel：+886-3-265-9999 , +886-3-456-3171 │ Fax：+886-3-265-8888 , +886-3-456-3176
+		</div>
+	</footer>
+</body>
+</html>

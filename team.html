@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>關於我們</title>
+	<style type="text/css">
+	@import"team.css"; /*打自己的CSS檔名*/
+	body{
+		margin:0;
+		font-family:GenRyuMin-M;
+	}	
+	img {
+	    width: 100%;
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+<script type="text/javascript" >  
+	$(window).scroll(function() {/*上方白色清單高度變化*/
+	    if ( $(this).scrollTop() > 100){
+	        // $('.top-list').css({'height':'100px','position':'fixed'});
+	        $('.top-header').addClass(' C-header');
+	        $('.top-list').addClass(' C-top-list');
+	    } else {
+	        $('.top-header').removeClass(' C-header');
+	        $('.top-list').removeClass(' C-top-list');
+	    }
+	});
+</script>  
+</head>
+<body>
+<div id="BGG" style="display:none;"></div>
+<div id="BGX" style="display:none;" onclick="hiddenPP()"><img src="images/X.png"></div>
+	<header>
+	<div class="top-header">
+		<div class="top-list">
+			<div class="dropdown L1">				
+					<a href="school.html"><img src="images/L1.png"></a> <!--特色-->
+			</div>
+			<div class="dropdown L2">				
+					<a href="activities.html"><img src="images/L2.png"></a> <!--活動-->
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin-top:3px;margin-left: -45px">
+						<a class="dropdown-item" href="activities.html#C1" style="color:black;">風雅頌</a>	
+						<a class="dropdown-item" href="activities.html#C2" style="color:black;">音樂廳</a>	
+						<a class="dropdown-item" href="activities.html#C3" style="color:black;">瑞麗堂</a>	
+					</div>
+			</div>
+			<div class="top-logo"><a href="index.html"><img src="images/logo1.png"></a></div>
+			<div class="dropdown L3">				
+					<a href="video.html"><img src="images/L3.png"></a> <!--影片-->
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin-top:3px;margin-left: -45px">
+						<a class="dropdown-item" href="video.html#V1" style="color:black;">影片介紹</a>	
+						<a class="dropdown-item" href="video.html#V2" style="color:black;">影片花絮</a>	
+					</div>
+			</div>
+			<div class="dropdown L4">				
+					<a href="team.html"><img src="images/L4.png"></a> <!--組員-->
+			</div>
+		</div>
+	</div><!--最上面的選單-->
+</header>
+<script>
+	function hiddenPP(){
+		$('.p1').removeClass('p11');
+		$('.p2').removeClass('p22');
+		$('.p3').removeClass('p33');
+		$('.p4').removeClass('p44');
+		$('.p1').addClass('pp1');
+		$('.p2').addClass('pp2');
+		$('.p3').addClass('pp3');
+		$('.p4').addClass('pp4');
+		$(".PD1").css('display','none');
+		$(".PD2").css('display','none');
+		$(".PD3").css('display','none');
+		$(".PD4").css('display','none');
+		document.getElementById("BGG").style.display="none";/*隱藏灰色透明物*/
+		document.getElementById("BGX").style.display="none";/*隱藏叉叉*/
+		document.getElementById("BGG").style.display="none";/*隱藏灰色透明物*/
+		document.getElementById("BGX").style.display="none";/*隱藏叉叉*/
+		document.getElementById("form_frame").style.display="none";/*隱藏譜*/
+		document.getElementById("form_frame2").style.display="none";/*顯示譜*/
+		document.getElementById("form_frame3").style.display="none";/*顯示譜*/
+	}
+	function showPe(X){
+		if(X==1)
+		{
+	      $('.p1').addClass('p11');
+	      document.getElementById("BGG").style.display="";/*顯示灰色透明物*/
+		  document.getElementById("BGX").style.display="";/*顯示叉叉*/
+		   $(".PD1").css('display','inline-block');
+		   $('.p1').removeClass('pp1');
+		}
+		if(X==2)
+		{
+		   $('.p2').addClass('p22');
+		   document.getElementById("BGG").style.display="";/*顯示灰色透明物*/
+		  document.getElementById("BGX").style.display="";/*顯示叉叉*/
+		  $(".PD2").css('display','inline-block');
+		  $('.p2').removeClass('pp2');
+		}
+		if(X==3)
+		{
+		   $('.p3').addClass('p33');
+		   document.getElementById("BGG").style.display="";/*顯示灰色透明物*/
+		  document.getElementById("BGX").style.display="";/*顯示叉叉*/
+		   $(".PD3").css('display','inline-block');
+		   $('.p3').removeClass('pp3');
+		}
+		if(X==4)
+		{
+		    $('.p4').addClass('p44');
+		    document.getElementById("BGG").style.display="";/*顯示灰色透明物*/
+		  document.getElementById("BGX").style.display="";/*顯示叉叉*/
+		   $(".PD4").css('display','inline-block');
+		   $('.p4').removeClass('pp4');
+		}
+	}
+	function showPP(){
+		document.getElementById("BGG").style.display="";/*顯示灰色透明物*/
+		document.getElementById("BGX").style.display="";/*顯示叉叉*/
+		document.getElementById("form_frame").style.display="inline-block";/*顯示譜*/
+		document.getElementById("form_frame2").style.display="inline-block";/*顯示譜*/
+		document.getElementById("form_frame3").style.display="inline-block";/*顯示譜*/
+	}
+	
+</script>
+	<div class="AP">
+	<div  class="imgH1"><img src="images/HP.png" style="position: relative;"></div>
+	<div  class="imgH2"><img src="images/HP2.png" style="position: relative;"></div>
+	<!-- <div style="text-align:bottom; ">
+		<div class="p1" onclick="showPe(1)" onmouseover="SS()"  onmouseout="HS()" ></div>
+		<div class="p2" onclick="showPe(2)" onmouseover="SS()" onmouseout="HS()" ></div>
+		<div class="p3" onclick="showPe(3)" onmouseover="SS()" onmouseout="HS()"></div>
+		<div class="p4" onclick="showPe(4)" onmouseover="SS()" onmouseout="HS()"></div>
+	</div> -->
+	<table style="margin-top: -390px;" align="center">
+	<tr>
+		<td  style="vertical-align:bottom;"><div class="p1 pp1" onclick="showPe(1)" ></div></td>
+		<td  style="vertical-align:bottom;"><div class="p2 pp2" onclick="showPe(2)"></div></td>
+		<td  style="vertical-align:bottom;"><div style="height: 580px;"></div></td>
+		<td  style="vertical-align:bottom;"><div class="p3 pp3" onclick="showPe(3)"></div></td>
+		<td  style="vertical-align:bottom;"><div class="p4 pp4" onclick="showPe(4)"></div></td>
+	</tr>
+	</table>
+		<div class="PD1">
+			ID:&nbsp;胡嘉軒 <a href="https://www.instagram.com/huhu3220/"  target="_blank" title="IG"><div class="FO"><img src="images/IG.png"></div></a><a href="https://www.facebook.com/profile.php?id=100003662905109" target="_blank" title="FB"><div class="FO"><img src="images/FB.png"></div></a>
+			<br>職業:&nbsp;非洲狐蒙&nbsp;&nbsp;<s>去背工具人</s><br><br>
+			<span class="PDW">&emsp;&emsp;經過這次的期中專案，發現其實每個人對於網頁的美都有不同的見解，每個人做出的網頁風格也不同，因此要時常的溝通討論，才能讓整個網頁有統一性。而寫網頁程式設計也比較好玩有趣，只是有時候在排版上要調很久，很崩潰。
+			</span>
+		</div>
+		<div class="PD2">
+			ID:&nbsp;林芷安 <a href="https://www.instagram.com/chihan0425/" target="_blank" title="IG"><div class="FO"><img src="images/IG.png"></div></a><a href="https://www.facebook.com/annie.lin.92" target="_blank" title="FB"><div class="FO"><img src="images/FB.png"></div></a>
+			<br>職業:&nbsp;超級神隊友&nbsp;&nbsp;<s></s><br><br>
+			<span class="PDW PDW2">&emsp;&emsp;我覺得多媒體很好玩，可以把自己想像的東西做出來，但跟一群人合作、分工不同的網頁，每個人的想法不同，風格有點難統一，而且調整排版就像是在訓練耐心，不像製圖軟體，滑鼠動一動就直接把東西拖到自己想要的位置上，而是要慢慢的試，但做久了，就大概知道距離、寬度之類的，比起容易看到網頁錯誤代碼500的後端，前端有成就感多了。
+			</span>
+		</div>
+		<div class="PD3">
+			ID:&nbsp;鍾昌桓<a href="https://www.instagram.com/_huan_huan___/" target="_blank" title="IG"><div class="FO"><img src="images/IG.png"></div></a><a href="https://www.facebook.com/profile.php?id=100001498526001" target="_blank" title="FB"><div class="FO"><img src="images/FB.png"></div></a>
+			<br>職業:&nbsp;礦工&nbsp;&nbsp;<s>國際舞者</s><br><br>
+			<span class="PDW PDW3">&emsp;&emsp;經過這次多媒體期中專案，其實相較後端，雖然前端看似比較畫面感、視覺感很重，所以可能做出來的當下會很有成就感，因為可以把腦海中想像的，透過一般的排版到美編到特效動畫呈現出來，但後段更偏向程式邏輯的比較是我所偏好的，因為邏輯對了基本上就通了，而前端會因為想要達成腦海中的畫面，一直修修補補，對我來說比較傷腦筋，但是還是在這堂課，可以更熟悉基本網站設計等等
+			</span>
+		</div>
+		<div class="PD4">
+			ID:&nbsp;蔡羽農 <a href="https://www.instagram.com/caiyunong__0901/" target="_blank" title="IG"><div class="FO"><img src="images/IG.png"></div></a><a href="https://www.facebook.com/profile.php?id=100008267881466" target="_blank" title="FB"><div class="FO"><img src="images/FB.png"></div></a>
+			<br>職業:&nbsp;學妹殺手&nbsp;&nbsp;<s>資管渣男</s><br><br>
+			<span class="PDW">&emsp;&emsp;這次做多媒體的期中專案，我發現多媒體比網程有趣多了，我個人真的比較喜歡做這種排版跟美化的工作，做完之後看到一個充滿著設計感的網站，而不是由一格一格的框框整齊排在那邊的畫面，真的很有成就感!
+			</span>
+		</div>
+	</div>
+
+	<!---<div class="B_1"><img src="images/B-1.jpg"></div>-->
+	<div class="PW">聯<br>絡<br>我<br>們<br><b>&#8594;</b></div>
+		<div class="P"><img src="images/P.png"><!-- 譜架 -->
+			<div class="P-1"  onclick="showPP()"><img src="images/P-2.png"></div><!-- 架上的譜 -->
+		</div>
+			<!-- <div id="RP" style="display: none;"><img src="images/RP.jpg"></div> --><!-- 譜 -->
+			<center>
+			<div id="form_frame">
+				<form>
+					<input type="text" placeholder="請輸入姓名" name="from_name" class="name">
+					<br>
+					<input type="text" placeholder="請輸入Email" name="email" class="email">
+					<br> 
+					<textarea name="back" cols="20" placeholder="請把文字打在這裡~" rows="2" wrap="hard" class="reback"></textarea>
+					<br>
+					<input type="submit" class="buttom_1" value="送出" >
+					<input type="reset" class="buttom_2" value="清除" >
+				</form>
+			</div>
+			<div id="form_frame2"></div>
+			<div id="form_frame3"></div>
+			</center>
+	<footer class="footer" >
+		<!-- <div class="F"><img src="images/F3.png"></div> -->
+		<div class="FW">
+			<div class="footer-logo"><!-- <img src="images/logo2.png"> -->Chung Yuan Christian University</div>
+			Copyright © 2019 ChihAn ChiaHsuan ChangHuan YuNung<br>
+			32023 桃園市中壢區中北路二OO號 200 Chung Pei Road, Chung Li District, Taoyuan City, Taiwan 32023, R.O.C. <br>
+			Tel：+886-3-265-9999 , +886-3-456-3171 │ Fax：+886-3-265-8888 , +886-3-456-3176
+		</div>
+	</footer>
+</body>
+</html>

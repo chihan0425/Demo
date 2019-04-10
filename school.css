@@ -1,0 +1,607 @@
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+@font-face {
+  font-family: 'GenRyuMin-B';
+  src: 
+         url('fonts/GenRyuMinTW-Bold.ttf') format("truetype"),
+         url('/fonts/Helvetica.eot') format("embedded-opentype");
+}
+@font-face {
+  font-family: 'GenRyuMin-R';
+  src: 
+        url('font/GenRyuMinTW-Regular.ttf') format("truetype"),
+         url('font/GenRyuMinTW-Regular') format("embedded-opentype");*/
+}
+@font-face {
+  font-family: 'GenRyuMin-M';
+  src: 
+        url('font/GenRyuMinTW-Medium.ttf') format("truetype"),
+         url('font/GenRyuMinTW-Medium') format("embedded-opentype");*/
+}
+.top-header{/*頂部白色條*/
+	width: 100%;
+	height: 130px;
+	/*background-color: #FFFFFF;*/
+	text-align: center;
+	position: fixed;
+    z-index: 100;
+    transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+}
+.C-header{ /*更改-頂部白色條*/
+    /*transition-delay: 0.3s;*/
+    background: #FFFFFF;
+    height: 80px;
+    border-bottom: solid 1px #eeeeee;
+}
+.top-list{ /*頂部白色條中清單*/
+	transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+}
+.C-top-list{ /*更改-頂部白色條中清單*/
+	margin-top: -28px;
+}
+.top-logo{ /*頂部LOGO*/
+	width: 150px;
+	height:80px;
+	/*background-color: green;*/
+	margin-top: 50px;
+	display: inline-block;
+	position: absolute;
+	margin-left:-75px;
+}
+.L1{
+	width: 65px;
+	height: 20px;
+	/*background-color: blue;*/
+	display: inline-block;
+	margin-right: 110px;
+	margin-top: 58px;
+	cursor: pointer;
+}
+.L2{
+	width: 65px;
+	height: 20px;
+	/*background-color: blue;*/
+	display: inline-block;
+	margin-right: 175px;
+	margin-top: 58px;
+	cursor: pointer;
+}
+.L3{
+	width: 65px;
+	height: 20px;
+	/*background-color: blue;*/
+	display: inline-block;
+	margin-left: 175px;
+	margin-top: 58px;
+	cursor: pointer;
+}
+.L4{
+	width: 65px;
+	height: 20px;
+	/*background-color: blue;*/
+	display: inline-block;
+	margin-left: 110px;
+	margin-top: 58px;
+	cursor: pointer;
+}
+.school
+{
+	display: inline-block;
+	overflow: hidden;
+	position:relative;
+}
+
+.context
+{
+	display: inline-block;
+	font-size: 30px;
+	line-height: 45px;
+	letter-spacing: 6px;
+	margin-left: 230px;
+	margin-top: 280px;
+	animation:CC 1s;/*一輪的時間*/
+}
+@keyframes CC{ /*動畫*/
+	0% {
+	   	opacity: 0;
+	}
+	100% {
+	   	opacity: 1;
+	}
+}
+.school-pic
+{
+	float: right;
+	width:760px;
+	height:393px;
+	margin-right: 100px;
+	margin-top: 200px;
+	overflow:hidden;
+}
+.school-pic img,.SG img,.windband-1 img,.windband-2 img,.MU img{transform:scale(1,1);transition: all 1s ease-out;}
+.school-pic img:hover,.SG img:hover,.windband-1 img:hover,.windband-2 img:hover,.MU img:hover{transform:scale(1.2,1.2);}
+.cycu
+{
+	font-size: 24px;
+	line-height:60px;
+	letter-spacing:8px;
+	margin-left:160px;
+	margin-top: 360px;
+	padding-right: 550px;
+	animation:CC 1s;/*一輪的時間*/
+	position: relative;
+	z-index: -3;
+}
+.school-pic2
+{
+	width:320px;
+	height:627px;
+	position: absolute;
+	margin-top: 130px;
+	margin-left:1100px;
+	transform-origin:160px 100px;
+	display: none;
+	animation:G 1s;
+}
+@keyframes G{ /*動畫*/
+	0% {
+		opacity: 0;
+		margin-top: 200px;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 130px;
+	}
+}
+.school-pic22{
+	animation:SC 3s linear infinite;
+}
+@keyframes SC{ /*動畫*/
+	0% {
+		transform: rotate(0deg);
+	}
+	25%{
+		transform: rotate(-20deg);
+	}
+	50%{
+		transform: rotate(0deg);
+	}
+	75%{
+		transform: rotate(20deg);
+	}
+	100% {
+	    transform: rotate(0deg);
+	}
+}
+.bottom
+{
+
+	position:absolute;
+	margin-top: 100px;
+	margin-right: 90px;
+	width: 1660px;
+	height: 180px;
+	z-index: -2;
+}
+.education
+{
+	font-size: 70px;
+	letter-spacing: 25px;
+	margin-left: 150px;
+	margin-top: 140px;
+	position: absolute;
+	color: white;
+}
+.PN{
+	margin-top: 100px;
+}
+.no1
+{
+	display: inline-block;
+	margin-top: 250px;
+	width: 100%;
+	text-align: center;
+}
+.no1-pic-1
+{
+	width:250px;
+	height: 200px;
+	position: relative;
+	cursor: pointer;
+}
+.no1-pic-11
+{
+	width:250px;
+	height: 200px;
+	position: relative;
+	margin-left: 150px;
+	cursor: pointer;
+}
+.person1
+{
+	display: inline-block;
+	width:300px;
+	height: 262px;
+	position:absolute;
+	z-index: -1;
+	margin-left:15%;
+	margin-top:10px;
+}
+.person2
+{
+	display: inline-block;
+	width:300px;
+	height: 289px;
+	position:absolute;
+	z-index: -1;
+	margin-left:39%;
+	margin-top:10px;
+	display: none;
+	animation: person2 1s;
+}
+@keyframes person2{ /*人物進場動畫*/
+	0% {
+	   	margin-top:70px;
+	   	opacity: 0;
+	}
+	100% {
+	    margin-top:10px;
+	    opacity: 1;
+	}
+}
+@keyframes CC{ /*進場動畫*/
+	0% {
+	   	opacity: 0;
+	}
+	100% {
+	    opacity: 1;
+	}
+}
+.person3
+{
+	display: inline-block;
+	width:300px;
+	height: 262px;
+	position:absolute;
+	z-index: -1;
+	margin-left:68%;
+	margin-top:10px;
+}
+.no1W1{
+	width: 110%;
+	height: 250px;
+	background-color: #cd0505;
+	margin-top: -60px;
+	margin-left: -50px;
+	position: absolute;
+	z-index: -1;
+	transform: rotate(-10deg);
+	text-align: center;
+	padding: 60px;
+	font-family:GenRyuMin-M;
+	animation: no1W1 0.5s;
+	display: none;
+}
+.no1W2{
+	width: 110%;
+	height: 250px;
+	background-color: #cd0505;
+	margin-top: -60px;
+	margin-left: -50px;
+	position: absolute;
+	z-index: -1;
+	text-align: center;
+	padding: 60px;
+	font-family:GenRyuMin-M;
+	animation: no1W2 0.5s;
+	display: none;
+}
+.no1W3{
+	width: 110%;
+	height: 250px;
+	background-color: #cd0505;
+	margin-top: -60px;
+	margin-left: -50px;
+	position: absolute;
+	z-index: -1;
+	transform: rotate(10deg);
+	text-align: center;
+	padding: 60px;
+	font-family:GenRyuMin-M;
+	animation: no1W3 0.5s;
+	display: none;
+}
+@keyframes no1W1{ /*動畫*/
+	0% {
+	   	margin-left: -2000px;
+	   	margin-top: 350px;
+	}
+	100% {
+	   margin-left: -50px;
+	   margin-top: -60px;
+	}
+}
+@keyframes no1W2{ /*動畫*/
+	0% {
+	   	margin-top: 300px;
+	}
+	100% {
+	   margin-top: -60px;
+	}
+}
+@keyframes no1W3{ /*動畫*/
+	0% {
+	   	margin-left: 2000px;
+	   	margin-top: 350px;
+	}
+	100% {
+	   margin-left: -50px;
+	   margin-top: -60px;
+	}
+}
+.WN1{
+	font-size: 30px;
+	color: #FFFFFF;
+}
+.WN2{
+	font-size: 50px;
+	color: #fff700;
+}
+.MU{
+	margin-top: 50px;
+}
+.poster
+{
+	width:500px;
+	height: 686px;
+	position: relative;
+	margin-left:100px;
+	margin-top: 94px;
+	float: left;
+	animation: CC 1s;
+	display: none;
+	overflow: hidden;
+}
+.music-1
+{
+	display: inline-block;
+	width:400px;
+	height: 260px;
+	position: relative;
+	margin-left: 10px;
+	margin-top:519px;
+	animation: CC 1s;
+	display: none;
+	overflow: hidden;
+}
+.music-title
+{
+	width: 550px;
+	position: absolute;
+	font-size:45px;
+	margin-left:850px;
+	margin-top: -500px;
+	letter-spacing:15px;
+	animation: CC 1s;
+	display: none;
+}
+.music-word
+{
+	display: inline-block;
+	font-size:18px;
+	margin-left:-150px;
+	margin-top: 50px;
+	letter-spacing:5px;
+}
+.band
+{
+	display: inline-block;
+	margin-top:250px;
+	overflow: hidden;
+	position: relative;
+}
+.WI{
+	margin-top: -115px;
+	animation: CC 1s;
+	display: none;
+}
+.windband
+{
+	display: inline-block;
+	font-size:40px;
+	margin-top: 190px;
+	margin-left:850px; 
+	letter-spacing: 10px;
+	font-weight:bold;
+}
+.windband-1
+{
+	width: 650px;
+	height: 433px;
+	position: absolute;
+	float: left;
+	margin-left: 150px;
+	margin-top: -100px;
+	animation: windband-1 1s;
+	display: none;
+	overflow: hidden;
+}
+@keyframes windband-1{ /*進場動畫*/
+	0% {
+	   	margin-left: -650px;
+	}
+	100% {
+		margin-left: 150px;
+	}
+}
+.windband-word
+{
+	display: inline-block;
+	font-size:18px;
+	letter-spacing: 5px;
+	margin-left: 850px;
+	margin-right: 160px;
+	line-height: 35px;
+}
+
+.windband-2
+{
+	position: absolute;
+	display: inline-block;
+	width: 650px;
+	height: 433px;
+	/*position: absolute;*/
+	margin-top: 100px;
+	margin-left:800px;
+	animation: windband-2 1s;
+	display: none;
+	overflow: hidden;
+}
+@keyframes windband-2{ /*進場動畫*/
+	0% {
+	   margin-left:1500px;
+	}
+	100% {
+		margin-left: 800px;
+	}
+}
+.windband-word2
+{
+	/*display: inline-block;*/
+	font-size:18px;
+	letter-spacing: 5px;
+	margin-left: 200px;
+	line-height: 35px;
+	margin-top: 150px;
+	animation: CC 1s;
+	display: none;
+}
+.bassoon
+{
+	width: 450px;
+	height:389px;
+	position:absolute;
+	z-index: 2;
+	margin-left: 1000px;
+	margin-top: 0px;
+	animation: CC 1s;
+	display: none;
+}
+.S{
+	width: 100%;
+	height: 750px;
+	position: relative;
+	display: inline-block;
+}
+.SW{
+	font-size:40px;
+	margin-left: 850px;
+	margin-top:380px;
+	display: inline-block;
+	position: absolute;
+	width: 500px;
+	font-weight:bold;
+	letter-spacing: 5px;
+	animation: CC 1s;
+	display: none;
+}
+.SW2{
+	font-size:18px;
+	margin-left:-180px;
+	margin-top:70px;
+	display: inline-block;
+	position: absolute;
+	line-height: 35px;
+	letter-spacing: 5px;
+	font-weight:normal;
+}
+.SG{
+	width: 600px;
+	display: inline-block;
+	margin-left: 210px;
+	margin-top: 150px;
+	animation: SG 1s;
+	display: none;
+	overflow: hidden;
+}
+@keyframes SG{ /*進場動畫*/
+	0% {
+	   margin-left:-610px;
+	}
+	100% {
+		margin-left: 210px;
+	}
+}
+.SG2{
+	width: 300px;
+	display: inline-block;
+	margin-right:170px;
+	margin-top: 100px;
+/*	position: absolute;*/
+	float: right;
+	transform: rotate(-5deg);
+	animation: CC 1s;
+	display: none;
+}
+.footer{
+	background-color: #000000;
+	height: 150px;
+	overflow: hidden;
+	color: #FFFFFF;
+	text-align: center;
+}
+.footer-logo{
+	/*width: 150px;*/
+	margin: 0px auto;
+	margin-top: 0px; 
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+.FW{
+	display: inline-block;
+	/*width: 100%;*/
+	text-align: center;
+	margin-top: 25px;
+	font-size: 10px;
+}
+.tp
+{
+	display: inline-block;
+	width: 600px;
+	height: 184px;
+	position: absolute;
+	margin-left: 1100px;
+	margin-top: 150px;
+	z-index: -1;
+	transform: rotate(15deg);
+	animation: tp 1s;
+	display: none;
+}
+@keyframes tp{ /*進場動畫*/
+	0% {
+	  margin-left: 1800px;
+	}
+	100% {
+		margin-left: 1100px;
+	}
+}
+.principal
+{
+	width: 250px;
+	height: 302px;
+	position: absolute;
+	z-index: -3;
+	margin-left: 50px;
+	margin-top: 0px;
+	transform: rotateY(180deg);
+}
+.background
+{
+	display: inline-block;
+	position: absolute;
+	width: 280px;
+	margin-left: 100px;
+	transform: rotate(40deg);
+	opacity: 0.5;
+	z-index: -3;
+}

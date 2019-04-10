@@ -1,0 +1,612 @@
+@font-face {
+  font-family: 'GenRyuMin-B';
+  src: 
+         url('fonts/GenRyuMinTW-Bold.ttf') format("truetype"),
+         url('/fonts/Helvetica.eot') format("embedded-opentype");
+}
+@font-face {
+  font-family: 'GenRyuMin-R';
+  src: 
+        url('font/GenRyuMinTW-Regular.ttf') format("truetype"),
+         url('font/GenRyuMinTW-Regular') format("embedded-opentype");*/
+}
+@font-face {
+  font-family: 'GenRyuMin-M';
+  src: 
+        url('font/GenRyuMinTW-Medium.ttf') format("truetype"),
+         url('font/GenRyuMinTW-Medium') format("embedded-opentype");*/
+}
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+#BGG{/*半透明灰色*/
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	z-index:98;
+	/*pointer-events: none;*//*解決滑鼠移入移出閃爍問題*/
+	/*display: none;*/
+	animation:BGG 0.3s;/*一輪的時間*/
+}
+@keyframes BGG{ /*半透明灰色的動畫*/
+	0% {
+	   	opacity: 0;
+	}
+	90% {
+	   	opacity: 1;
+	}
+}
+#BGX{/*叉叉*/
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	z-index:101;
+	display: inline-block;
+	/*background-color: green;*/
+	animation: SShow;/*動畫名稱*/
+	animation-duration: 0.5s;/*動畫時間*/
+	margin-left:90%;
+	margin-top:50px; 
+	cursor: pointer;
+}
+.top-header{/*頂部白色條*/
+	width: 100%;
+	height: 130px;
+	background-color: #FFFFFF;
+	text-align: center;
+	position: fixed;
+    z-index: 90;
+    transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+}
+.C-header{ /*更改-頂部白色條*/
+    /*transition-delay: 0.3s;*/
+    background: #FFFFFF;
+    height: 80px;
+    border-bottom: solid 1px #eeeeee;
+    z-index: 90;
+}
+.top-list{ /*頂部白色條中清單*/
+	transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+}
+.C-top-list{ /*更改-頂部白色條中清單*/
+	margin-top: -28px;
+}
+.top-logo{ /*頂部LOGO*/
+	width: 150px;
+	height:80px;
+	/*background-color: green;*/
+	margin-top: 50px;
+	display: inline-block;
+	position: absolute;
+	margin-left:-75px;
+}
+.L1{
+	width: 65px;
+	height: 20px;
+	/*background-color: blue;*/
+	display: inline-block;
+	margin-right: 110px;
+	margin-top: 58px;
+	cursor: pointer;
+}
+.L2{
+	width: 65px;
+	height: 20px;
+	/*background-color: blue;*/
+	display: inline-block;
+	margin-right: 175px;
+	margin-top: 58px;
+	cursor: pointer;
+}
+.L3{
+	width: 65px;
+	height: 20px;
+	/*background-color: blue;*/
+	display: inline-block;
+	margin-left: 175px;
+	margin-top: 58px;
+	cursor: pointer;
+}
+.L4{
+	width: 65px;
+	height: 20px;
+	/*background-color: blue;*/
+	display: inline-block;
+	margin-left: 110px;
+	margin-top: 58px;
+	cursor: pointer;
+}
+.AP{
+	width: 100%;
+	height: 600px;
+	/*background-color: red;*/
+	margin-top: 100px;
+/*	position: relative;*/
+	z-index: -1;
+	float: left;
+}
+.imgH1{
+	width:1300px;
+	opacity: 0.5;
+	margin-top: 50px;
+	margin-left: 100px;
+}
+.imgH2{
+	width:1300px;
+	opacity: 0.5;
+	margin-top: 50px;
+	margin-left: 100px;
+}
+.p1{
+	width: 150px;
+	height: 500px;
+	display: inline-block;
+	margin-left: 10px;
+	/*margin-top: 120px;*/
+	cursor: pointer;
+
+	transform: rotate(0deg);
+	background-image:url('images/胡-1.png');
+	background-size: 140px;
+	/*position: absolute;*/
+	background-repeat: no-repeat; 
+	
+}
+.p2{
+	width: 150px;
+	height:500px;
+	display: inline-block;
+	margin-left: 10px;
+	/*margin-top: 120px;*/
+	cursor: pointer;
+	/*position: absolute;*/
+	z-index: 101;
+	transform: rotate(-2deg);
+	background-image:url('images/安-1.png');
+	background-size: 140px;
+	background-repeat: no-repeat; 
+}
+.p3{
+	width: 170px;
+	height: 500px;
+	display: inline-block;
+	margin-left: 10px;
+	/*margin-top: 110px;*/
+	cursor: pointer;
+	transform: rotate(0deg);
+	background-image:url('images/昌-1.png');
+	background-size: 160px;
+	/*position: absolute;*/
+	margin-bottom: 8px;
+	background-repeat: no-repeat; 
+}
+.p4{
+	width: 150px;
+	height: 520px;
+	display: inline-block;
+	/*margin-top: 55px;*/
+	margin-left: 10px;
+	cursor: pointer;
+	transform: rotate(0deg);
+	background-image:url('images/羽-1.png');
+	background-size: 150px;
+	background-repeat: no-repeat; 
+	/*position: absolute;*/
+	margin-bottom: 25px;
+}
+.pp1:hover,.pp2:hover,.pp3:hover{
+	animation: jump1; /*動畫名稱*/
+	animation-duration: 0.2s;/*動畫時間*/
+	animation-iteration-count:infinite;/*重複播放*/
+	animation-timing-function:linear;/*動畫曲線*/
+}
+.pp4:hover{
+	animation: jump2; /*動畫名稱*/
+	animation-duration: 0.2s;/*動畫時間*/
+	animation-iteration-count:infinite;/*重複播放*/
+	animation-timing-function:linear;/*動畫曲線*/
+}
+@keyframes jump1{ /*彈跳動畫*/
+  0%{
+    margin-bottom:8px;
+  }
+  50%{
+    margin-bottom: 25px;
+  }
+  100%{
+    margin-bottom: 8px;
+  }
+}
+@keyframes jump2{ /*彈跳動畫*/
+  0%{
+    margin-bottom:25px;
+  }
+  50%{
+    margin-bottom: 42px;
+  }
+  100%{
+    margin-bottom: 25px;
+  }
+}
+.p11{
+	background-image:url('images/胡-2.png');
+	background-size: 300px;
+	width: 350px;
+	height: 500px;
+	margin-bottom:30px;
+	position:relative;
+	z-index: 101;
+	animation:BGG 0.3s;/*一輪的時間*/
+}
+.p22{
+	background-image:url('images/安-2.png');
+	background-size: 300px;
+	width: 350px;
+	height: 500px;
+	margin-bottom:-100px;
+	background-repeat: no-repeat; 
+	transform: rotate(-2deg);
+	position:relative;
+	z-index: 101;
+	animation:BGG 0.3s;/*一輪的時間*/
+}
+.p33{
+	background-image:url('images/昌-2.png');
+	background-size: 300px;
+	width: 300px;
+	height: 500px;
+	margin-top: 50px;
+	margin-left: 250px;
+	position:relative;
+	z-index: 101;
+	animation:BGG 0.3s;/*一輪的時間*/
+}
+.p44{
+	background-image:url('images/羽-2.png');
+	background-size: 230px;
+	width: 350px;
+	height: 370px;
+	margin-top: 50px;
+	position:relative;
+	z-index: 101;
+	margin-bottom: -20px;
+	margin-right: -500px;
+	animation:BGG 0.3s;/*一輪的時間*/
+}
+.PD1{
+	width: 550px;
+	height: 400px;
+	position: absolute;
+	z-index: 101;
+	background-color: #FFFFFF;
+	margin-top: -500px;
+	margin-left: 650px;
+	opacity: 0.8;
+	color: #000000;
+	font-size: 25px;
+	font-family:GenRyuMin-M;
+	border-radius: 10px;
+	display: none;
+	display: none;
+	padding: 50px 50px;
+	
+}
+.PD2{
+	width: 550px;
+	height: 400px;
+	position: absolute;
+	z-index: 101;
+	background-color: #FFFFFF;
+	margin-top: -570px;
+	margin-left: 750px;
+	opacity: 0.8;
+	color: #000000;
+	font-size: 25px;
+	font-family:GenRyuMin-M;
+	border-radius: 10px;
+	display: none;
+	display: none;
+	padding: 30px 50px;
+	
+}
+.PD3{
+	width: 550px;
+	height: 400px;
+	position: absolute;
+	z-index: 101;
+	background-color: #FFFFFF;
+	margin-top: -570px;
+	margin-left: 250px;
+	opacity: 0.8;
+	color: #000000;
+	font-size: 25px;
+	font-family:GenRyuMin-M;
+	border-radius: 10px;
+	display: none;
+	display: none;
+	padding: 50px 50px;
+	
+}
+.PD4{
+	width: 550px;
+	height: 400px;
+	position: absolute;
+	z-index: 101;
+	background-color: #FFFFFF;
+	margin-top: -570px;
+	margin-left: 450px;
+	opacity: 0.8;
+	color: #000000;
+	font-size: 25px;
+	font-family:GenRyuMin-M;
+	border-radius: 10px;
+	display: none;
+	padding: 50px 50px;
+}
+.PDW{
+	font-size: 20px;
+}
+.PDW2{
+	font-size: 16px;
+}
+.PDW3{
+	font-size: 15px;
+}
+.B_1{
+	width: 250px;
+	height: 1px;
+	/*background-color: blue;*/
+	display: inline-block;
+	margin-left:350px;
+	margin-top: 88px;
+}
+#form_frame{
+	margin: 10px auto;
+	margin-bottom:10px;
+	margin-left: -66%; 
+	margin-top: 100px;
+    width: 500px;
+    height: 510px;
+    min-height: 510px;
+    padding: 10px;
+    position:absolute;
+    background: -webkit-gradient(linear, 100% 100%, 50% 10%, from(	#DDDDDD), to(#f3f3f3), color-stop(.1,#fff));
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 1px 1px 4px rgba(0,0,0, 0.1);
+    -webkit-border-bottom-right-radius: 10px 5px;
+    display: inline-block;
+    text-align: left;
+     display: none;     
+	z-index:100;
+	animation: SShow; /*動畫名稱*/
+	animation-duration: 0.5s;/*動畫時間*/
+}
+#form_frame2{
+	content: '';
+    width: 500px;
+    height: 510px;
+    margin-left: -67%; 
+    margin-top: 90px;
+    z-index:99;
+    padding: 0 0 1px 0;
+    position: absolute;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(	#DDDDDD), to(#f9f9f9), color-stop(.1,	#DDDDDD));
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 1px 1px 8px rgba(0,0,0, 0.1);
+    -webkit-border-bottom-right-radius: 65px 5px;
+    -webkit-transform: skew(2deg,2deg)
+                        translate(16px,30px);
+    margin-bottom:10px;
+    display:none;     
+}
+#form_frame3{
+	content: '';
+    width: 500px;
+    height: 510px;
+    margin-left:-66%; 
+    margin-top: 100px;
+    z-index:99;
+    padding: 0 0 1px 0;
+    position: absolute;
+    background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(	#f3f3f3), to(#f6f6f6), color-stop(.1,#fff));
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0px 0px 8px rgba(0,0,0, 0.1);
+    -webkit-transform: skew(2deg,2deg)
+                        translate(-17px,18px);
+    margin-bottom:10px;      
+     display: none;              
+}
+.back{
+	width: 400px;
+	height: 60px;
+	margin-left:550px;
+	margin-top:50px;
+	text-align: center;
+	display: inline-block;
+	letter-spacing: 5px;
+	font-family: '微軟正黑體', 'arial black', sans-serif;
+	color: #666666;
+	text-align: center;
+	background-color:white;
+	text-align: center;
+	font-size: 40px;
+}
+.name{
+	width:170px;
+	margin-top:35px;
+	margin-left:30px;
+	padding: 3px 1px 3px 17px ;
+	border-width:2px;
+	border-style:none none outset none ;
+	border-color:#FAF0E6;
+	text-align: 10px;
+	font-family: '微軟正黑體';
+	font-weight:bolder;
+	font-size:20px;
+	color:#444444;
+	background:none ;
+}
+.email{
+	width:300px;
+	margin-top:35px;
+	margin-left:30px;
+	padding: 3px 1px 3px 17px ;
+	border-width:2px;
+	border-style:none none outset none ;
+	border-color:#FAF0E6;
+	text-align: 10px;
+	font-family: '微軟正黑體';
+	font-weight:bolder;
+	font-size:20px;
+	color:#444444;
+	background:none ;
+}
+.reback{
+	width:300px;
+	margin-top:35px;
+	margin-left:30px;
+	padding: 18px 1px 3px 17px ;
+	border-width:2px;
+	border-style:none none outset none ;
+	border-color:#FAF0E6;
+	text-align: 10px;
+	font-family: '微軟正黑體';
+	font-weight:bolder;
+	font-size:20px;
+	color:#444444;
+	background:none ;
+}
+.buttom_1{
+	margin-left:100px;
+	margin-top:90px;
+	display: inline-block;
+ 	padding: 10px 20px;
+ 	font-size: 18px;
+ 	text-align: center;
+ 	text-decoration: none;
+ 	outline: none;
+ 	background: -webkit-gradient(linear, 100% 100%, 50% 10%, from(	#DDDDDD), to(#f3f3f3), color-stop(.1,#fff));
+ 	border: none;
+ 	border-radius: 15px;
+ 	box-shadow: 0px 4px 4px #AAAAAA;
+ 	cursor: pointer;
+ 	position: absolute;
+ 	color:#444444;
+ 	font-family: '微軟正黑體';
+	font-weight:bolder;
+}
+.buttom_1:hover{
+	margin-top:100px;
+}
+.buttom_2{
+	margin-left:300px;
+	margin-top:90px;
+	display: inline-block;
+ 	padding: 10px 20px;
+ 	font-size: 18px;
+ 	text-align: center;
+ 	text-decoration: none;
+ 	outline: none;
+ 	background: -webkit-gradient(linear, 100% 100%, 50% 10%, from(	#DDDDDD), to(#f3f3f3), color-stop(.1,#fff));
+ 	border: none;
+ 	border-radius: 15px;
+ 	box-shadow: 0px 4px 4px #AAAAAA;
+ 	cursor: pointer;
+ 	color:#444444;
+ 	position: absolute;
+ 	font-family: '微軟正黑體';
+	font-weight:bolder;
+}
+.buttom_2:hover{
+	margin-top:100px;
+}
+.FO{
+	width: 40px;
+	display: inline-block;
+	float: right;
+	margin-left: 10px; 
+}
+.PW{
+	position: absolute;
+    display: inline-block;
+    margin-top: 315px;
+    margin-left: -330px;
+    z-index: 92;
+    font-family:GenRyuMin-M;
+    font-size: 14px;
+}
+.P{/*譜架*/
+	width: 200px;
+	height:500px;
+	display: inline-block;
+	margin-top:310px;
+	margin-left:-320px;	
+	z-index: 92;
+	position:absolute;
+}
+.P-1{/*架上的譜*/
+	width: 80px;
+	height: 50px;
+	display: inline-block;
+	/*background-color:green;*/
+	position:absolute;
+	margin-top: -390px;
+	margin-left: 50px;
+	cursor: pointer;
+	z-index: 92;
+}
+.P-1:hover{
+	animation: jump; /*動畫名稱*/
+	animation-duration: 0.4s;/*動畫時間*/
+	animation-iteration-count:infinite;/*重複播放*/
+	animation-timing-function:linear;/*動畫曲線*/
+}
+#RP{/*真的譜*/
+	width: 400px;
+	display: inline-block;
+	position: fixed;
+	z-index:99;
+	margin-left:-340px; 
+	animation: SShow; /*動畫名稱*/
+	animation-duration: 0.5s;/*動畫時間*/
+}
+@keyframes SShow { /*淡入動畫*/
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@keyframes jump{ /*彈跳動畫*/
+  0%{
+    margin-top: -390px;
+  }
+  50%{
+   margin-top: -410px;
+  }
+  100%{
+   margin-top: -390px;
+  }
+ }
+.footer{
+	background-color: #000000;
+	height: 150px;
+	overflow: hidden;
+	color: #FFFFFF;
+	text-align: center;
+	position: relative;
+	width: 100%;
+	z-index: -1;
+}
+.footer-logo{
+	/*width: 150px;*/
+	margin: 0px auto;
+	margin-top: 0px; 
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+.FW{
+	display: inline-block;
+	/*width: 100%;*/
+	text-align: center;
+	margin-top: 25px;
+	font-size: 10px;
+}
