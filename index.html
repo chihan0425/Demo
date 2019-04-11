@@ -1,205 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-
-	<title>首頁-中原大學</title>
-
-<style type="text/css">
-	@import"H.css";  
-</style>
-
-<style type="text/css">
-	body{
-		margin:0;
-		font-family:GenRyuMin-M;
-		min-width:1490px;
-	}
-	
-	img {
-	    width: 100%;
-	}
-</style>
-
-<script src="JS/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script type="text/javascript" >  
-
-	$(window).scroll(function() {/*上方白色清單高度變化*/
-	    if ( $(this).scrollTop() > 100){
-	        // $('.top-list').css({'height':'100px','position':'fixed'});
-	        $('.top-header').addClass(' C-header');
-	        $('.top-list').addClass(' C-top-list');
-	    } else {
-	        $('.top-header').removeClass(' C-header');
-	        $('.top-list').removeClass(' C-top-list');
-	    }
-	});
-</script>  
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.2" type="text/javascript"></script> -->
-<script type="text/javascript">
-var A=0;
-if(A==0){
-$(window).scroll(function() {
-	    if ( $(this).scrollTop() > 400){
-	       $('.S2H').addClass('S2H-C');/*大頭動畫*/
-	       $(function(){/*註冊率動畫*/
-		  
-		 if(A==0){
-		  var interval = setInterval(increment,25);
-		  var current = 0;
-		  A++;
-		  function increment(){
-		    current+=2.11;
-		    $('#S2W').html(current.toFixed(2)); 
-		    $('#S2W').addClass('S2WC');
-		    if(current >= 99.37) {$(".S2W-3").css('display','inline-block');$('#S2W').html('99.37'); return; }
-		  }
-		 }
-		});
-	    } 
-	});
-}
-</script>
-<script>
-	function showPP(){
-		document.getElementById("BGG").style.display="";/*顯示灰色透明物*/
-		document.getElementById("BGX").style.display="";/*顯示叉叉*/
-		document.getElementById("RP").style.display="";/*顯示譜*/
-	}
-	function hiddenPP(){
-		document.getElementById("BGG").style.display="none";/*隱藏灰色透明物*/
-		document.getElementById("BGX").style.display="none";/*隱藏叉叉*/
-		document.getElementById("RP").style.display="none";/*隱藏譜*/
-	}
-	$(document).ready(function() {setTimeout("ShowWP2()",2000)});
-	function ShowWP2(){
-		$('.PP1').removeClass(' WP1');
-		$('.PP1').addClass('WW1');
-		$('.PP2').removeClass(' WP2');
-		$('.PP2').addClass('WW2');
-		$('.PP3').removeClass(' WP3');
-		$('.PP3').addClass('WW3');
-		$('.PP4').removeClass(' WP4');
-		$('.PP4').addClass('WW4');
-
-	}
-</script>
-
-</head>
-<body>
-<div id="BGG" style="display:none;"></div>
-<div id="BGX" style="display:none;" onclick="hiddenPP()"><img src="images/X.png"></div>
-<header>
-	<div class="top-header">
-		<div class="top-list">
-
-			<div class="dropdown L1">				
-					<a href="school.html"><img src="images/L1.png"></a> <!--特色-->
-			</div>
-			<div class="dropdown L2">				
-					<a href="activities.html"><img src="images/L2.png"></a> <!--活動-->
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin-top:3px;margin-left: -45px">
-						<a class="dropdown-item" href="activities.html#C1" style="color:black;">風雅頌</a>	
-						<a class="dropdown-item" href="activities.html#C2" style="color:black;">音樂廳</a>	
-						<a class="dropdown-item" href="activities.html#C3" style="color:black;">瑞麗堂</a>	
+	<head>
+		<meta charset="UTF-8">
+		<title>首頁-中原大學</title>
+		<style>
+			@import"H.css";
+		</style>
+		<style>
+			body{
+				margin:0;
+				font-family:GenRyuMin-M;
+				min-width:1490px;
+			}
+			
+			img {
+			width: 100%;
+			}
+		</style>
+		<script src="JS/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script type="text/javascript" >
+			$(window).scroll(function() {/*上方白色清單高度變化*/
+			if ( $(this).scrollTop() > 100){
+			// $('.top-list').css({'height':'100px','position':'fixed'});
+			$('.top-header').addClass(' C-header');
+			$('.top-list').addClass(' C-top-list');
+			} else {
+			$('.top-header').removeClass(' C-header');
+			$('.top-list').removeClass(' C-top-list');
+			}
+			});
+		</script>
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.2" type="text/javascript"></script> -->
+		<script type="text/javascript">
+		var A=0;
+		if(A==0){
+		$(window).scroll(function() {
+			if ( $(this).scrollTop() > 400){
+			$('.S2H').addClass('S2H-C');/*大頭動畫*/
+			$(function(){/*註冊率動畫*/
+				
+				if(A==0){
+				var interval = setInterval(increment,25);
+				var current = 0;
+				A++;
+				function increment(){
+				current+=2.11;
+				$('#S2W').html(current.toFixed(2));
+				$('#S2W').addClass('S2WC');
+				if(current >= 99.37) {$(".S2W-3").css('display','inline-block');$('#S2W').html('99.37'); return; }
+				}
+				}
+				});
+			}
+			});
+		}
+		</script>
+		<script>
+			function showPP(){
+				document.getElementById("BGG").style.display="";/*顯示灰色透明物*/
+				document.getElementById("BGX").style.display="";/*顯示叉叉*/
+				document.getElementById("RP").style.display="";/*顯示譜*/
+			}
+			function hiddenPP(){
+				document.getElementById("BGG").style.display="none";/*隱藏灰色透明物*/
+				document.getElementById("BGX").style.display="none";/*隱藏叉叉*/
+				document.getElementById("RP").style.display="none";/*隱藏譜*/
+			}
+			$(document).ready(function() {setTimeout("ShowWP2()",2000)});
+			function ShowWP2(){
+				$('.PP1').removeClass(' WP1');
+				$('.PP1').addClass('WW1');
+				$('.PP2').removeClass(' WP2');
+				$('.PP2').addClass('WW2');
+				$('.PP3').removeClass(' WP3');
+				$('.PP3').addClass('WW3');
+				$('.PP4').removeClass(' WP4');
+				$('.PP4').addClass('WW4');
+			}
+		</script>
+	</head>
+	<body>
+		<div id="BGG" style="display:none;"></div>
+		<div id="BGX" style="display:none;" onclick="hiddenPP()"><img src="images/X.png"></div>
+		<header>
+			<div class="top-header">
+				<div class="top-list">
+					<div class="dropdown L1">
+						<a href="school.html"><img src="images/L1.png"></a> <!--特色-->
 					</div>
-			</div>
-			<div class="top-logo"><a href="index.html"><img src="images/logo1.png"></a></div>
-			<div class="dropdown L3">				
-					<a href="video.html"><img src="images/L3.png"></a> <!--影片-->
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin-top:3px;margin-left: -45px">
-						<a class="dropdown-item" href="video.html#V1" style="color:black;">影片介紹</a>	
-						<a class="dropdown-item" href="video.html#V2" style="color:black;">影片花絮</a>	
+					<div class="dropdown L2">
+						<a href="activities.html"><img src="images/L2.png"></a> <!--活動-->
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin-top:3px;margin-left: -45px">
+							<a class="dropdown-item" href="activities.html#C1" style="color:black;">風雅頌</a>
+							<a class="dropdown-item" href="activities.html#C2" style="color:black;">音樂廳</a>
+							<a class="dropdown-item" href="activities.html#C3" style="color:black;">瑞麗堂</a>
+						</div>
 					</div>
-			</div>
-			<div class="dropdown L4">				
-					<a href="team.html"><img src="images/L4.png"></a> <!--組員-->
-			</div>
-		</div>
-	</div><!--最上面的選單-->
-</header>
-
-<section><!-- 第一部分 -->
-		<div id="S-1" ><!-- 照片 -->
+					<div class="top-logo"><a href="index.html"><img src="images/logo1.png"></a></div>
+					<div class="dropdown L3">
+						<a href="video.html"><img src="images/L3.png"></a> <!--影片-->
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin-top:3px;margin-left: -45px">
+							<a class="dropdown-item" href="video.html#V1" style="color:black;">影片介紹</a>
+							<a class="dropdown-item" href="video.html#V2" style="color:black;">影片花絮</a>
+						</div>
+					</div>
+					<div class="dropdown L4">
+						<a href="team.html"><img src="images/L4.png"></a> <!--組員-->
+					</div>
+				</div>
+				</div><!--最上面的選單-->
+			</header>
+			<section><!-- 第一部分 -->
+			<div id="S-1" ><!-- 照片 -->
 			<div class="P"><img src="images/P.png"><!-- 譜架 -->
-				<div class="P-1"  onclick="showPP()"><img src="images/P-1.png"></div><!-- 架上的譜 -->
-			</div>
-			<div id="RP" style="display: none;"><img src="images/RP.jpg"></div><!-- 譜 -->
-			<div id="T-title" >
-					<div class="T-B">
-					<div class="SP">
-					  <div class="RE1"></div>
-					  <div class="RE5"></div>
-					  <div class="RE3"></div>
-					  <div class="RE4"></div>
-					  <div class="RE3"></div>
-					  <div class="RE4"></div>
-					  <div class="RE5"></div>
-					  <div class="RE3"></div>
-					  <div class="RE1"></div>
-					  <div class="RE5"></div>
-					  <div class="RE2"></div>
-					  <div class="RE4"></div>
-					  <div class="RE3"></div>
-					  <div class="RE2"></div>
-					  <div class="RE4"></div>
-					  <div class="RE1"></div>
-					  <div class="RE3"></div>
-					  <div class="RE4"></div>
-					  <div class="RE1"></div>
-					  <div class="RE5"></div>
-					  <div class="RE4"></div>
-					  <div class="RE4"></div>
-					  <div class="RE2"></div>
-					  <div class="RE4"></div>
-					  <div class="RE2"></div>
-					  <div class="RE5"></div>
-					  <div class="RE1"></div>
-					  <div class="RE5"></div>
-					  <div class="RE3"></div>
-					  <div class="RE5"></div>
-					  <div class="RE2"></div>
-					  <div class="RE4"></div>
-					  <div class="RE5"></div>
-					  <div class="RE4"></div>
-					  <div class="RE2"></div>
-					  <div class="RE5"></div>
-					  <div class="RE1"></div>
-					  <div class="RE3"></div>
-					  <div class="RE5"></div>
-					  <div class="RE4"></div>
-					  <div class="RE1"></div>
-					  <div class="RE5"></div>
-					  <div class="RE2"></div>
-					  <div class="RE1"></div>
-					  <div class="RE3"></div>
-					  <div class="RE2"></div>
-					  <div class="RE5"></div>
-					  <div class="RE2"></div>
-					  <div class="RE3"></div>
-					  <div class="RE5"></div>
-					  <div class="RE1"></div>
-					  <div class="RE5"></div>
-					  <div class="RE2"></div>
-					  <div class="RE4"></div>
-		  			</div>
-			</div>
-
-				<table align="center" height="300px" width="100%" style="margin-top: -50px;position: absolute;z-index: 90;min-width:1490px;" >
-					<tr>	
-						<td><div class="W W1" ><img src="images/W1.png"><div class="PP1 WP1"><img src="images/WW1.png"></div></div></td>
-						<td><div class="W W2" ><img src="images/W2.png"><div class="PP2 WP2"><img src="images/WW2.png"></div></div></td>
-						<td><div class="W W3" ><img src="images/W3.png"><div class="PP3 WP3"><img src="images/WW3.png"></div></div></td>
-						<td><div class="W W4" ><img src="images/W4.png"><div class="PP4 WP4"><img src="images/WW4.png"></div></div></td>
-					</tr>
-				</table><!-- 中原大學字 -->
-			</div> 
+			<div class="P-1"  onclick="showPP()"><img src="images/P-1.png"></div><!-- 架上的譜 -->
 		</div>
-	<!-- </div> -->
-</section>
-<section><!-- 第二部分 -->
+		<div id="RP" style="display: none;"><img src="images/RP.jpg"></div><!-- 譜 -->
+		<div id="T-title" >
+			<div class="T-B">
+				<div class="SP">
+					<div class="RE1"></div>
+					<div class="RE5"></div>
+					<div class="RE3"></div>
+					<div class="RE4"></div>
+					<div class="RE3"></div>
+					<div class="RE4"></div>
+					<div class="RE5"></div>
+					<div class="RE3"></div>
+					<div class="RE1"></div>
+					<div class="RE5"></div>
+					<div class="RE2"></div>
+					<div class="RE4"></div>
+					<div class="RE3"></div>
+					<div class="RE2"></div>
+					<div class="RE4"></div>
+					<div class="RE1"></div>
+					<div class="RE3"></div>
+					<div class="RE4"></div>
+					<div class="RE1"></div>
+					<div class="RE5"></div>
+					<div class="RE4"></div>
+					<div class="RE4"></div>
+					<div class="RE2"></div>
+					<div class="RE4"></div>
+					<div class="RE2"></div>
+					<div class="RE5"></div>
+					<div class="RE1"></div>
+					<div class="RE5"></div>
+					<div class="RE3"></div>
+					<div class="RE5"></div>
+					<div class="RE2"></div>
+					<div class="RE4"></div>
+					<div class="RE5"></div>
+					<div class="RE4"></div>
+					<div class="RE2"></div>
+					<div class="RE5"></div>
+					<div class="RE1"></div>
+					<div class="RE3"></div>
+					<div class="RE5"></div>
+					<div class="RE4"></div>
+					<div class="RE1"></div>
+					<div class="RE5"></div>
+					<div class="RE2"></div>
+					<div class="RE1"></div>
+					<div class="RE3"></div>
+					<div class="RE2"></div>
+					<div class="RE5"></div>
+					<div class="RE2"></div>
+					<div class="RE3"></div>
+					<div class="RE5"></div>
+					<div class="RE1"></div>
+					<div class="RE5"></div>
+					<div class="RE2"></div>
+					<div class="RE4"></div>
+				</div>
+			</div>
+			<table align="center" height="300px" width="100%" style="margin-top: -50px;position: absolute;z-index: 90;min-width:1490px;" >
+				<tr>
+					<td><div class="W W1" ><img src="images/W1.png"><div class="PP1 WP1"><img src="images/WW1.png"></div></div></td>
+					<td><div class="W W2" ><img src="images/W2.png"><div class="PP2 WP2"><img src="images/WW2.png"></div></div></td>
+					<td><div class="W W3" ><img src="images/W3.png"><div class="PP3 WP3"><img src="images/WW3.png"></div></div></td>
+					<td><div class="W W4" ><img src="images/W4.png"><div class="PP4 WP4"><img src="images/WW4.png"></div></div></td>
+				</tr>
+				</table><!-- 中原大學字 -->
+			</div>
+		</div>
+		<!-- </div> -->
+	</section>
+	<section><!-- 第二部分 -->
 	<div class="S-2">
 		<div class="S2G"><img src="images/99.png"></div> <!-- 小圖 -->
 		<p class="S2W-1">107學年度</p>
@@ -209,38 +199,36 @@ $(window).scroll(function() {
 		<div class="S2H"><img src="images/HHH1.png"></div> <!-- 大頭 -->
 	</div>
 </section>
-
 <script type="text/javascript">
-
 $(window).scroll(function() {/*光正頭動畫*/
 		if ( $(this).scrollTop() > 300){
-	       $('.S2G').addClass('S2GC');
-	    } 
-	    if ( $(this).scrollTop() > 700){
-	       $('.BossH').addClass('BossHC');
-	       $(".BossH").css('display','inline-block');
-	    } 
-	    if ( $(this).scrollTop() > 950){
-	       $('.S3WW1').addClass('S3WW');
-	       $(".S3WW1").css('display','inline-block');
-	       $('.S3G-A').addClass('S3WG');
-	       $(".S3G-A").css('display','inline-block');
-	       $('.S3WW3').addClass('S3WW');
-	       $(".S3WW3").css('display','inline-block');
-	       $('.S3G-C').addClass('S3WG');
-	       $(".S3G-C").css('display','inline-block');
-	       $('.S3G-B').addClass('S3WG');
-	       $(".S3G-B").css('display','inline-block');
-	       $('.S3G-D').addClass('S3WG');
-	       $(".S3G-D").css('display','inline-block');
-	       setTimeout("JJ()",1000)
-	    } 
-	    if ( $(this).scrollTop() > 1050){
-	       $('.S3WW2').addClass('S3WW');
-	       $(".S3WW2").css('display','inline-block');
-	       $('.S3WW4').addClass('S3WW');
-	       $(".S3WW4").css('display','inline-block');	       
-	    } 
+	$('.S2G').addClass('S2GC');
+	}
+	if ( $(this).scrollTop() > 700){
+	$('.BossH').addClass('BossHC');
+	$(".BossH").css('display','inline-block');
+	}
+	if ( $(this).scrollTop() > 950){
+	$('.S3WW1').addClass('S3WW');
+	$(".S3WW1").css('display','inline-block');
+	$('.S3G-A').addClass('S3WG');
+	$(".S3G-A").css('display','inline-block');
+	$('.S3WW3').addClass('S3WW');
+	$(".S3WW3").css('display','inline-block');
+	$('.S3G-C').addClass('S3WG');
+	$(".S3G-C").css('display','inline-block');
+	$('.S3G-B').addClass('S3WG');
+	$(".S3G-B").css('display','inline-block');
+	$('.S3G-D').addClass('S3WG');
+	$(".S3G-D").css('display','inline-block');
+	setTimeout("JJ()",1000)
+	}
+	if ( $(this).scrollTop() > 1050){
+	$('.S3WW2').addClass('S3WW');
+	$(".S3WW2").css('display','inline-block');
+	$('.S3WW4').addClass('S3WW');
+		$(".S3WW4").css('display','inline-block');
+	}
 	});
 	function JJ(){
 		$(".RY").css('display','inline-block');
@@ -264,54 +252,54 @@ $(window).scroll(function() {/*光正頭動畫*/
 	function showP(X){
 		if(X==1)
 		{
-		   $('.S3P1').addClass('S3CP1');
-	       $(".S3P1").css('display','inline-block');
-	       $(".RY2").css('display','inline-block');
-	       $(".RY").css('display','none');
-	       $(".GG1").css('display','block');
+		$('.S3P1').addClass('S3CP1');
+	$(".S3P1").css('display','inline-block');
+	$(".RY2").css('display','inline-block');
+	$(".RY").css('display','none');
+	$(".GG1").css('display','block');
 		}
 		if(X==2)
 		{
-		   $('.S3P2').addClass('S3CP2');
-	       $(".S3P2").css('display','inline-block');
-	       $(".GG2").css('display','block');
+		$('.S3P2').addClass('S3CP2');
+	$(".S3P2").css('display','inline-block');
+	$(".GG2").css('display','block');
 		}
 		if(X==3)
 		{
-		   $('.S3P3').addClass('S3CP3');
-	       $(".S3P3").css('display','inline-block');
-	       $(".GG3").css('display','block');
+		$('.S3P3').addClass('S3CP3');
+	$(".S3P3").css('display','inline-block');
+	$(".GG3").css('display','block');
 		}
 		if(X==4)
 		{
-		   $('.S3P4').addClass('S3CP4');
-	       $(".S3P4").css('display','inline-block');
-	       $(".GG4").css('display','block');
+		$('.S3P4').addClass('S3CP4');
+	$(".S3P4").css('display','inline-block');
+	$(".GG4").css('display','block');
 		}
 	}
 	function hiddenP(X)
 	{
 		if(X==1)
 		{
-	       $(".S3P1").css('display','none');
-	       $(".RY2").css('display','none');
-	       $(".RY").css('display','inline-block');
-	       $(".GG1").css('display','none');
+	$(".S3P1").css('display','none');
+	$(".RY2").css('display','none');
+	$(".RY").css('display','inline-block');
+	$(".GG1").css('display','none');
 		}
 		if(X==2)
 		{
-	       $(".S3P2").css('display','none');
-	       $(".GG2").css('display','none');
+	$(".S3P2").css('display','none');
+	$(".GG2").css('display','none');
 		}
 		if(X==3)
 		{
-	       $(".S3P3").css('display','none');
-	       $(".GG3").css('display','none');
+	$(".S3P3").css('display','none');
+	$(".GG3").css('display','none');
 		}
 		if(X==4)
 		{
-	       $(".S3P4").css('display','none');
-	       $(".GG4").css('display','none');
+	$(".S3P4").css('display','none');
+	$(".GG4").css('display','none');
 		}
 	}
 	function showF(){
@@ -322,63 +310,59 @@ $(window).scroll(function() {/*光正頭動畫*/
 	}
 </script>
 <section><!-- 第三部分 -->
-	<div class="S-3">
-		<div class="S3G"><img src="images/H2.png" class="LHB"><!-- 長條圖 -->
-			<div class="S3W">
-				<table align="center" height="300px" width="100%" style="margin-top: -50px;position: absolute;z-index: 90;min-width:1490px;" >
-					<tr>	
-						<td><div class="G3W" ><img src="images/W1-1.png"></div></td>
-						<td><div class="G3W" ><img src="images/W2-1.png"></div></td>
-						<td><div class="G3W" ><img src="images/W3-1.png"></div></td>
-						<td><div class="G3W" ><img src="images/W4-1.png"></div></td>
-					</tr>
-				</table><!-- 中原大學字 -->
-			</div>		
-		</div>
-		<div style="margin-top: -150px;">
-			<div class="No No-1 NoC1">第一名</div><div class="No No-2 NoC2">第一名</div>
-			<div class="No No-3 NoC3">第一名</div><div class="No No-4 NoC4">第一名</div>
-		</div>
-		<div class="BossH"  onmouseover="showNo1()" onmouseout="hiddenNo1()" ><img src="images/HH.png"></div><!-- 光正頭 -->	
-		<center>
-		<div style="margin-top: 60px;">
-		<table   style="margin-top: -90px;margin-left:60px; ">
-			<tr>	
-				<td><a href="activities.html#C3" style="color:#000000;">
-				<div class="S3G-A" style="margin-left: -60px;" onmouseover="showP(1)" onmouseout="hiddenP(1)">
-					<img src="images/A2.jpg"><div class="GG1">地點 : 全人村2樓</div></div>
-					<div class="S3WW1"><span>瑞<br>麗<br>堂</span></div><div class="S3P1"><img src="images/S33.png"></div>
-					<div class="RY" ><img src="images/J2.png"></div></a></td>
-
-				<td><div class="S3P2" ><img src="images/S34.png"></div>
-					<div class="S3G-B " style="margin-left: -27px;" onmouseover="showP(2)" onmouseout="hiddenP(2)">
-					<img src="images/A5.jpg"><div class="GG2">地點 : 維澈樓2樓</div></div><div class="S3WW2"><span>宗<br>倬<br>章</span></div></td>
-
-				<td><a href="activities.html#C2" style="color:#000000;">
-					<div class="S3G-C " style="margin-left: -27px;" onmouseover="showP(3)" onmouseout="hiddenP(3)">
-					<img src="images/A7.jpg"><div class="GG3">地點 : 活動中心2樓</div></div>
-					<div class="S3WW3"><span>音<br>樂<br>廳</span></div><div class="S3P3"><img src="images/S31.png"></div></a></td>
-
-				<td><a href="activities.html#C1" style="color:#000000;">
-				<div class="S3G-D " style="margin-left: -27px;" onmouseover="showP(4)" onmouseout="hiddenP(4)">
-					<img src="images/A3.jpg"><div class="GG4">地點 : 真知教學大樓2樓</div></div><div class="RY2" ><img src="images/J.png"></div>
-					<div class="S3P4"><img src="images/S32.png"></div><div class="S3WW4"><span>風<br>雅<br>頌</span></div></a></td>
+<div class="S-3">
+	<div class="S3G"><img src="images/H2.png" class="LHB"><!-- 長條圖 -->
+	<div class="S3W">
+		<table align="center" height="300px" width="100%" style="margin-top: -50px;position: absolute;z-index: 90;min-width:1490px;" >
+			<tr>
+				<td><div class="G3W" ><img src="images/W1-1.png"></div></td>
+				<td><div class="G3W" ><img src="images/W2-1.png"></div></td>
+				<td><div class="G3W" ><img src="images/W3-1.png"></div></td>
+				<td><div class="G3W" ><img src="images/W4-1.png"></div></td>
 			</tr>
-		</table>
+			</table><!-- 中原大學字 -->
 		</div>
-		</center>
-		
 	</div>
-</section>
-<footer class="footer" onmouseover="showF()" onmouseout="hiddenF()">
-		<!-- <div class="F"><img src="images/F3.png"></div> -->
-		<div class="FW">
-			<div class="footer-logo"><!-- <img src="images/logo2.png"> -->Chung Yuan Christian University</div>
-			Copyright © 2019 ChihAn ChiaHsuan ChangHuan YuNung<br>
-			32023 桃園市中壢區中北路二OO號 200 Chung Pei Road, Chung Li District, Taoyuan City, Taiwan 32023, R.O.C. <br>
-			Tel：+886-3-265-9999 , +886-3-456-3171 │ Fax：+886-3-265-8888 , +886-3-456-3176
-		</div>
-</footer>
-
-</body>
-</html>
+	<div style="margin-top: -150px;">
+		<div class="No No-1 NoC1">第一名</div><div class="No No-2 NoC2">第一名</div>
+		<div class="No No-3 NoC3">第一名</div><div class="No No-4 NoC4">第一名</div>
+	</div>
+	<div class="BossH"  onmouseover="showNo1()" onmouseout="hiddenNo1()" ><img src="images/HH.png"></div><!-- 光正頭 -->
+	<center>
+	<div style="margin-top: 60px;">
+		<table   style="margin-top: -90px;margin-left:60px; ">
+			<tr>
+				<td><a href="activities.html#C3" style="color:#000000;">
+					<div class="S3G-A" style="margin-left: -60px;" onmouseover="showP(1)" onmouseout="hiddenP(1)">
+						<img src="images/A2.jpg"><div class="GG1">地點 : 全人村2樓</div></div>
+						<div class="S3WW1"><span>瑞<br>麗<br>堂</span></div><div class="S3P1"><img src="images/S33.png"></div>
+						<div class="RY" ><img src="images/J2.png"></div></a></td>
+						<td><div class="S3P2" ><img src="images/S34.png"></div>
+						<div class="S3G-B " style="margin-left: -27px;" onmouseover="showP(2)" onmouseout="hiddenP(2)">
+							<img src="images/A5.jpg"><div class="GG2">地點 : 維澈樓2樓</div></div><div class="S3WW2"><span>宗<br>倬<br>章</span></div></td>
+							<td><a href="activities.html#C2" style="color:#000000;">
+								<div class="S3G-C " style="margin-left: -27px;" onmouseover="showP(3)" onmouseout="hiddenP(3)">
+									<img src="images/A7.jpg"><div class="GG3">地點 : 活動中心2樓</div></div>
+									<div class="S3WW3"><span>音<br>樂<br>廳</span></div><div class="S3P3"><img src="images/S31.png"></div></a></td>
+									<td><a href="activities.html#C1" style="color:#000000;">
+										<div class="S3G-D " style="margin-left: -27px;" onmouseover="showP(4)" onmouseout="hiddenP(4)">
+											<img src="images/A3.jpg"><div class="GG4">地點 : 真知教學大樓2樓</div></div><div class="RY2" ><img src="images/J.png"></div>
+											<div class="S3P4"><img src="images/S32.png"></div><div class="S3WW4"><span>風<br>雅<br>頌</span></div></a></td>
+										</tr>
+									</table>
+								</div>
+								</center>
+								
+							</div>
+						</section>
+						<footer class="footer" onmouseover="showF()" onmouseout="hiddenF()">
+							<!-- <div class="F"><img src="images/F3.png"></div> -->
+							<div class="FW">
+								<div class="footer-logo"><!-- <img src="images/logo2.png"> -->Chung Yuan Christian University</div>
+								Copyright © 2019 ChihAn ChiaHsuan ChangHuan YuNung<br>
+								32023 桃園市中壢區中北路二OO號 200 Chung Pei Road, Chung Li District, Taoyuan City, Taiwan 32023, R.O.C. <br>
+								Tel：+886-3-265-9999 , +886-3-456-3171 │ Fax：+886-3-265-8888 , +886-3-456-3176
+							</div>
+						</footer>
+					</body>
+				</html>
