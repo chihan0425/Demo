@@ -874,7 +874,7 @@ opacity: 1;
 display: inline-block;
 width: 300px;
 height: 210px;
-background-color:#aacfd0;
+background-color:#bfca85;
 margin-top: -550px;
 padding: 20px;
 border-radius:20px;
@@ -883,6 +883,12 @@ cursor: pointer;
 display: none;
 margin-right: 50px;
 /*pointer-events: none;*//*解決滑鼠移入移出閃爍問題*/
+}
+.S3G-A{
+	background-color:#c3cfcf;
+}
+.S3G-C{
+	background-color:#ffde81;
 }
 .S3G-B,.S3G-D{
 display: inline-block;
@@ -896,6 +902,12 @@ border-radius:20px;
 cursor: pointer;
 display: none;
 /*pointer-events: none;*//*解決滑鼠移入移出閃爍問題*/
+}
+.S3G-B{
+	background-color:#f29995;
+}
+.S3G-D{
+	background-color:#bfca85;
 }
 .S3WW{/*字動畫*/
 animation:S3WW 2s ; /*動畫名稱*/
