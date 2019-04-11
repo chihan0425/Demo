@@ -1,725 +1,792 @@
 @font-face {
-  font-family: 'GenRyuMin-B';
-  src: 
-         url('fonts/GenRyuMinTW-Bold.ttf') format("truetype"),
-         url('/fonts/Helvetica.eot') format("embedded-opentype");
+font-family: 'GenRyuMin-B';
+src:
+url('fonts/GenRyuMinTW-Bold.ttf') format("truetype"),
+url('/fonts/Helvetica.eot') format("embedded-opentype");
 }
 @font-face {
-  font-family: 'GenRyuMin-R';
-  src: 
-        url('font/GenRyuMinTW-Regular.ttf') format("truetype"),
-         url('font/GenRyuMinTW-Regular') format("embedded-opentype");*/
+font-family: 'GenRyuMin-R';
+src:
+url('font/GenRyuMinTW-Regular.ttf') format("truetype"),
+url('font/GenRyuMinTW-Regular') format("embedded-opentype");*/
 }
 @font-face {
-  font-family: 'GenRyuMin-M';
-  src: 
-        url('font/GenRyuMinTW-Medium.ttf') format("truetype"),
-         url('font/GenRyuMinTW-Medium') format("embedded-opentype");*/
+font-family: 'GenRyuMin-M';
+src:
+url('font/GenRyuMinTW-Medium.ttf') format("truetype"),
+url('font/GenRyuMinTW-Medium') format("embedded-opentype");*/
 }
 #BGG{/*半透明灰色*/
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.6);
-	position: fixed;
-	z-index:98;
-	pointer-events: none;/*解決滑鼠移入移出閃爍問題*/
-	/*display: none;*/
-	animation:BGG 0.3s;/*一輪的時間*/
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+position: fixed;
+z-index:98;
+pointer-events: none;/*解決滑鼠移入移出閃爍問題*/
+/*display: none;*/
+animation:BGG 0.3s;/*一輪的時間*/
 }
 @keyframes BGG{ /*半透明灰色的動畫*/
-	0% {
-	   	opacity: 0;
-	}
-	90% {
-	   	opacity: 1;
-	}
+0% {
+opacity: 0;
+}
+90% {
+opacity: 1;
+}
 }
 #BGX{/*叉叉*/
-	width: 40px;
-	height: 40px;
-	position: fixed;
-	z-index:101;
-	display: inline-block;
-	/*background-color: green;*/
-	animation: SShow;/*動畫名稱*/
-	animation-duration: 0.5s;/*動畫時間*/
-	margin-left:90%;
-	margin-top:50px; 
-	cursor: pointer;
+width: 40px;
+height: 40px;
+position: fixed;
+z-index:101;
+display: inline-block;
+/*background-color: green;*/
+animation: SShow;/*動畫名稱*/
+animation-duration: 0.5s;/*動畫時間*/
+margin-left:90%;
+margin-top:50px;
+cursor: pointer;
 }
 .top-header{/*頂部白色條*/
-	width: 100%;
-	height: 130px;
-	/*background-color: #FFFFFF;*/
-	text-align: center;
-	position: fixed;
-    z-index: 100;
-    transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-    font-family:GenRyuMin-M;
-    min-width:1490px;
+width: 100%;
+height: 130px;
+/*background-color: #FFFFFF;*/
+text-align: center;
+position: fixed;
+z-index: 100;
+transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+font-family:GenRyuMin-M;
+min-width:1490px;
 }
 .C-header{ /*更改-頂部白色條*/
-    /*transition-delay: 0.3s;*/
-    background: #FFFFFF;
-    height: 80px;
-    border-bottom: solid 1px #eeeeee;
+/*transition-delay: 0.3s;*/
+background: #FFFFFF;
+height: 80px;
+border-bottom: solid 1px #eeeeee;
 }
 .top-list{ /*頂部白色條中清單*/
-	transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
 }
 .C-top-list{ /*更改-頂部白色條中清單*/
-	margin-top: -28px;
+margin-top: -28px;
 }
 .top-logo{ /*頂部LOGO*/
-	width: 150px;
-	height:80px;
-	/*background-color: green;*/
-	margin-top: 50px;
-	display: inline-block;
-	position: absolute;
-	margin-left:-75px;
-	cursor: pointer;
+width: 150px;
+height:80px;
+/*background-color: green;*/
+margin-top: 50px;
+display: inline-block;
+position: absolute;
+margin-left:-75px;
+cursor: pointer;
 }
 .dropdown-menu li:hover .sub-menu {visibility: visible;}
 .dropdown:hover .dropdown-menu {display: block;}
 .L1{
-	width: 65px;
-	height: 20px;
-	/*background-color: blue;*/
-	display: inline-block;
-	margin-right: 110px;
-	margin-top: 58px;
-	cursor: pointer;
+width: 65px;
+height: 20px;
+/*background-color: blue;*/
+display: inline-block;
+margin-right: 110px;
+margin-top: 58px;
+cursor: pointer;
 }
 .L2{
-	width: 65px;
-	height: 20px;
-	/*background-color: blue;*/
-	display: inline-block;
-	margin-right: 175px;
-	margin-top: 58px;
-	cursor: pointer;
+width: 65px;
+height: 20px;
+/*background-color: blue;*/
+display: inline-block;
+margin-right: 175px;
+margin-top: 58px;
+cursor: pointer;
 }
 .L3{
-	width: 65px;
-	height: 20px;
-	/*background-color: blue;*/
-	display: inline-block;
-	margin-left: 175px;
-	margin-top: 58px;
-	cursor: pointer;
+width: 65px;
+height: 20px;
+/*background-color: blue;*/
+display: inline-block;
+margin-left: 175px;
+margin-top: 58px;
+cursor: pointer;
 }
 .L4{
-	width: 65px;
-	height: 20px;
-	/*background-color: blue;*/
-	display: inline-block;
-	margin-left: 110px;
-	margin-top: 58px;
-	cursor: pointer;
+width: 65px;
+height: 20px;
+/*background-color: blue;*/
+display: inline-block;
+margin-left: 110px;
+margin-top: 58px;
+cursor: pointer;
 }
 #S-1{ /*第一部分*/
-	width: 100%;
-	height: 620px;
-	/*background-color: blue;*/
-	float:left;
-	margin-top: 100px;
-	background-size: cover;
-	/*background-size: contain;*/
-	background-image: url('images/B1.png');
-	background-color:#E2E2E2;
-	z-index: -1;
-	min-width:1490px;
+width: 100%;
+height: 620px;
+/*background-color: blue;*/
+float:left;
+margin-top: 100px;
+background-size: cover;
+/*background-size: contain;*/
+background-image: url('images/B1.png');
+background-color:#E2E2E2;
+z-index: -1;
+min-width:1490px;
 }
 .P{/*譜架*/
-	width: 230px;
-	height:500px;
-	display: inline-block;
-	margin-top: 130px;
-	margin-left:650px;	
-	z-index: 92;
-	position:flex;
-    position: relative;
+width: 230px;
+height:500px;
+display: inline-block;
+margin-top: 130px;
+margin-left:650px;
+z-index: 92;
+position:flex;
+position: relative;
 }
 .P-1{/*架上的譜*/
-	width: 85px;
-	height: 50px;
-	display: inline-block;
-	/*background-color:green;*/
-	position:absolute;
-	margin-top: -438px;
-	margin-left: 60px;
-	cursor: pointer;
-	z-index: 92;
+width: 85px;
+height: 50px;
+display: inline-block;
+/*background-color:green;*/
+position:absolute;
+margin-top: -438px;
+margin-left: 60px;
+cursor: pointer;
+z-index: 92;
 }
 .P-1:hover{
-	animation: jump; /*動畫名稱*/
-	animation-duration: 0.4s;/*動畫時間*/
-	animation-iteration-count:infinite;/*重複播放*/
-	animation-timing-function:linear;/*動畫曲線*/
+animation: jump; /*動畫名稱*/
+animation-duration: 0.4s;/*動畫時間*/
+animation-iteration-count:infinite;/*重複播放*/
+animation-timing-function:linear;/*動畫曲線*/
 }
 #RP{/*真的譜*/
-	width: 400px;
-	display: inline-block;
-	position: fixed;
-	z-index:99;
-	margin-left:-340px; 
-	animation: SShow; /*動畫名稱*/
-	animation-duration: 0.5s;/*動畫時間*/
+width: 400px;
+display: inline-block;
+position: fixed;
+z-index:99;
+margin-left:-340px;
+animation: SShow; /*動畫名稱*/
+animation-duration: 0.5s;/*動畫時間*/
 }
 @keyframes SShow { /*淡入動畫*/
 0% {opacity: 0;}
 100% {opacity: 1;}
 }
-
 @keyframes jump{ /*彈跳動畫*/
-  0%{
-    margin-top: -438px;
-  }
-  50%{
-    margin-top: -450px;
-    border-bottom-right-radius:25px;
-  }
-  100%{
-    margin-top: -438px;
-  }
+0%{
+margin-top: -438px;
 }
-
+50%{
+margin-top: -450px;
+border-bottom-right-radius:25px;
+}
+100%{
+margin-top: -438px;
+}
+}
 #T-title{ /*中原大學4個大字*/
-	width: 100%;
-	height:400px;
-	/*background-color: red;*/
-	display: flex;
-	/*margin-top: -65px;*/
-	text-align: center;
-	margin-top: -500px;
+width: 100%;
+height:400px;
+/*background-color: red;*/
+display: flex;
+/*margin-top: -65px;*/
+text-align: center;
+margin-top: -500px;
 }
 .T-B{ /*背景動畫*/
-	width: 100%;
-	height:400px;
+width: 100%;
+height:400px;
 /*	background-color: red;*/
-	/*margin-top: -65px;*/
-	text-align: center;
-	display: flex;
-	margin-top: -10px;
-	position: flex !important;
-	z-index: 1;
+/*margin-top: -65px;*/
+text-align: center;
+display: flex;
+margin-top: -10px;
+position: flex !important;
+z-index: 1;
+}
+.SP
+{
+margin: 100px auto;
+width: 100%;
+height: 200px;
+text-align: center;
+font-size: 10px;
+z-index: -99;
+display: inline-block;
+position: relative;
+}
+
+.SP > div
+{
+/* background-color: #FFFFFF;*/
+background-color: rgba(255, 255, 255, 0.3);
+height: 100%;
+width: 15px;
+display: inline-block;
+margin-left: 10px;
+border-radius:50px;
+position:relative;
+animation: ST 1s infinite ease-in-out;
+}
+
+.SP .RE2 {
+animation-delay: -1.1s;
+animation: ST3 1s infinite ease-in-out;
+}
+
+.SP .RE3 {
+animation-delay: -1.0s;
+animation: ST2 0.5s infinite ease-in-out;
+}
+
+.SP .RE4 {
+animation-delay: -0.9s;
+animation: ST 0.7s infinite ease-in-out;
+}
+
+.SP .RE5 {
+animation-delay: -0.8s;
+}
+
+@keyframes ST {
+0% {
+transform: scaleY(0.4);
+}
+50% {
+transform: scaleY(1.0);
+}
+100%{
+transform: scaleY(0.4);
+}
+}
+@keyframes ST2 {
+0% {
+transform: scaleY(0.3);
+}
+50% {
+transform: scaleY(0.8);
+}
+100%{
+transform: scaleY(0.4);
+}
+}
+@keyframes ST3 {
+0% {
+transform: scaleY(0.1);
+}
+50% {
+transform: scaleY(0.5);
+}
+100%{
+transform: scaleY(0.4);
+}
 }
 #BW{ /*包4個大字讓他們置中*/
-	margin:0px auto;
+margin:0px auto;
 }
 .W{ /*所有的字的屬性*/
-	display:inline-block; 
-	width: 110px;
-	height: auto;
-	/*background-color: red;*/
-	overflow:hidden;
-	/*display: none;*/
-	overflow: initial;
+display:inline-block;
+width: 110px;
+height: auto;
+/*background-color: red;*/
+overflow:hidden;
+/*display: none;*/
+overflow: initial;
 }
 .W1:hover,.W2:hover,.W3:hover,.W4:hover{
-	transform: rotate(-10deg);
+transform: rotate(-10deg);
 }
 .W1{ /*第1個字*/
-	animation:WW 7s linear infinite; /*一輪的時間與重複撥放*/
-	animation-delay: 0.5s !important; /*延誤時間*/
-	animation-direction: normal;/*方向*/
-	/*margin-left:0px;*/
-	margin-top: 90px;
+animation:WW 7s linear infinite; /*一輪的時間與重複撥放*/
+animation-delay: 0.5s !important; /*延誤時間*/
+animation-direction: normal;/*方向*/
+/*margin-left:0px;*/
+margin-top: 90px;
 }
 .W2{ /*第2個字*/
-	animation:WW 7s linear infinite; /*一輪的時間與重複撥放*/
-	animation-delay: 0.5s !important; /*延誤時間*/
-	animation-direction: reverse;/*方向*/
-	/*margin-left:200px;*/
-	margin-top: 90px;
+animation:WW 7s linear infinite; /*一輪的時間與重複撥放*/
+animation-delay: 0.5s !important; /*延誤時間*/
+animation-direction: reverse;/*方向*/
+/*margin-left:200px;*/
+margin-top: 90px;
 }
 .W3{ /*第3個字*/
-	animation:WW 7s linear infinite; /*一輪的時間與重複撥放*/
-	animation-delay: 0.5s !important; /*延誤時間*/
-	animation-direction: normal;/*方向*/
-	/*margin-left:200px;*/
-	margin-top: 90px;
+animation:WW 7s linear infinite; /*一輪的時間與重複撥放*/
+animation-delay: 0.5s !important; /*延誤時間*/
+animation-direction: normal;/*方向*/
+/*margin-left:200px;*/
+margin-top: 90px;
 }
 .W4{ /*第4個字*/
-	animation:WW 7s linear infinite; /*一輪的時間與重複撥放*/
-	animation-delay: 0.5s !important; /*延誤時間*/
-	animation-direction: reverse;/*方向*/
-	/*margin-left:200px;*/
-	margin-top: 90px;
+animation:WW 7s linear infinite; /*一輪的時間與重複撥放*/
+animation-delay: 0.5s !important; /*延誤時間*/
+animation-direction: reverse;/*方向*/
+/*margin-left:200px;*/
+margin-top: 90px;
 }
 .WP1{/*人物進場*/
-	 animation: WWP1 1.5s ; /*動畫名稱*/
-	 width: 60px;
-	display: inline-block;
-	position:absolute;
-	transform: rotate(-10deg);
-	margin-left: -43px;
-    margin-top: -25px;
+animation: WWP1 1.5s ; /*動畫名稱*/
+width: 60px;
+display: inline-block;
+position:absolute;
+transform: rotate(-10deg);
+margin-left: -43px;
+margin-top: -25px;
 }
 .WP2{/*人物進場*/
-	 animation: WWP2 1.5s ; /*動畫名稱*/
-	 width: 58px;
-	display: inline-block;
-	position:absolute;
-	margin-left: -78px;
-    margin-top: -32px;
+animation: WWP2 1.5s ; /*動畫名稱*/
+width: 58px;
+display: inline-block;
+position:absolute;
+margin-left: -78px;
+margin-top: -32px;
 }
 .WP3{/*人物進場*/
-	 animation: WWP3 1.5s ; /*動畫名稱*/
-	width: 65px;
-	display: inline-block;
-	position:absolute;
-	transform: rotate(10deg);
-	margin-left: -38px;
-    margin-top: 18px;
+animation: WWP3 1.5s ; /*動畫名稱*/
+width: 65px;
+display: inline-block;
+position:absolute;
+transform: rotate(10deg);
+margin-left: -38px;
+margin-top: 18px;
 }
 .WP4{/*人物進場*/
-	 animation: WWP4 1.5s ; /*動畫名稱*/
-	 width: 65px;
-	display: inline-block;
-	position:absolute;
-	transform: rotate(-2deg);
-	margin-left: -118px;
-    margin-top: -48px;
+animation: WWP4 1.5s ; /*動畫名稱*/
+width: 65px;
+display: inline-block;
+position:absolute;
+transform: rotate(-2deg);
+margin-left: -118px;
+margin-top: -48px;
 }
 .WW1{
-	width: 60px;
-	display: inline-block;
-	/*background-color: red;*/
-	position:absolute;
-	transform: rotate(-10deg);
-	margin-left: -43px;
-    margin-top: -25px;
-    animation: WP1 7s linear infinite; /*動畫名稱*/
+width: 60px;
+display: inline-block;
+/*background-color: red;*/
+position:absolute;
+transform: rotate(-10deg);
+margin-left: -43px;
+margin-top: -25px;
+animation: WP1 7s linear infinite; /*動畫名稱*/
 }
 .WW2{
-	width: 58px;
-	display: inline-block;
-	/*background-color: red;*/
-	position:absolute;
-	margin-left: -78px;
-    margin-top: -32px;
-    animation: WP2 5s linear  infinite; /*動畫名稱*/
-    animation-delay: 1s !important; /*延誤時間*/
+width: 58px;
+display: inline-block;
+/*background-color: red;*/
+position:absolute;
+margin-left: -78px;
+margin-top: -32px;
+animation: WP2 5s linear  infinite; /*動畫名稱*/
+animation-delay: 1s !important; /*延誤時間*/
 }
 .WW3{
-	width: 65px;
-	display: inline-block;
-	/*background-color: red;*/
-	position:absolute;
-	transform: rotate(10deg);
-	margin-left: -38px;
-    margin-top: 18px;
-    animation: WP3 7s linear  infinite; /*動畫名稱*/
-    animation-delay: 1s !important; /*延誤時間*/
+width: 65px;
+display: inline-block;
+/*background-color: red;*/
+position:absolute;
+transform: rotate(10deg);
+margin-left: -38px;
+margin-top: 18px;
+animation: WP3 7s linear  infinite; /*動畫名稱*/
+animation-delay: 1s !important; /*延誤時間*/
 }
 .WW4{
-	width: 65px;
-	display: inline-block;
-	/*background-color: red;*/
-	position:absolute;
-	transform: rotate(-2deg);
-	margin-left: -118px;
-    margin-top: -48px;
-    animation: WP4 7s linear infinite; /*動畫名稱*/
-    animation-delay: 3s !important; /*延誤時間*/
+width: 65px;
+display: inline-block;
+/*background-color: red;*/
+position:absolute;
+transform: rotate(-2deg);
+margin-left: -118px;
+margin-top: -48px;
+animation: WP4 7s linear infinite; /*動畫名稱*/
+animation-delay: 3s !important; /*延誤時間*/
 }
 @keyframes WWP1{ /*人物進場動畫*/
-	0% {
-	   	margin-top:-80px;
-	   	opacity: 0;
-	}
-	100% {
-	    margin-top:-25px;
-	    opacity: 1;
-	}
+0% {
+margin-top:-80px;
+opacity: 0;
+}
+100% {
+margin-top:-25px;
+opacity: 1;
+}
 }
 @keyframes WWP2{ /*人物進場動畫*/
-	0% {
-	   	margin-top:-80px;
-	   	opacity: 0;
-	}
-	100% {
-	    margin-top:-32px;
-	    opacity: 1;
-	}
+0% {
+margin-top:-80px;
+opacity: 0;
+}
+100% {
+margin-top:-32px;
+opacity: 1;
+}
 }
 @keyframes WWP3{ /*人物進場動畫*/
-	0% {
-	   	margin-top:-50px;
-	   	opacity: 0;
-	}
-	100% {
-	    margin-top:18px;
-	    opacity: 1;
-	}
+0% {
+margin-top:-50px;
+opacity: 0;
+}
+100% {
+margin-top:18px;
+opacity: 1;
+}
 }
 @keyframes WWP4{ /*人物進場動畫*/
-	0% {
-	   	margin-top:-80px;
-	   	opacity: 0;
-	}
-	100% {
-	    margin-top:-48px;
-	    opacity: 1;
-	}
+0% {
+margin-top:-80px;
+opacity: 0;
+}
+100% {
+margin-top:-48px;
+opacity: 1;
+}
 }
 @keyframes WW{ /*字的動畫*/
-	0% {
-	   	margin-top:90px;
-	}
-	25% {
-	   	margin-top:10px;
-	}
-	50% {
-	   	margin-top:90px;
-	}
-	75% {
-	   	margin-top:150px;
-	}
-	100% {
-	 	margin-top:90px;
-	}
+0% {
+margin-top:90px;
+}
+25% {
+margin-top:10px;
+}
+50% {
+margin-top:90px;
+}
+75% {
+margin-top:150px;
+}
+100% {
+margin-top:90px;
+}
 }
 @keyframes WP1{ /*人動畫*/
-	0% {
-	   transform: rotate(-10deg);
-	}
-	10% {
-	   transform: rotate(0deg);
-	}
-	20% {
-	 	transform: rotate(-10deg);
-	}
-	30% {
-	   transform: rotate(0deg);
-	}
-	40% {
-	 	transform: rotate(-10deg);
-	}
+0% {
+transform: rotate(-10deg);
+}
+10% {
+transform: rotate(0deg);
+}
+20% {
+transform: rotate(-10deg);
+}
+30% {
+transform: rotate(0deg);
+}
+40% {
+transform: rotate(-10deg);
+}
 }
 @keyframes WP2{ /*人動畫*/
-	0% {
-	   transform: rotate(0deg);
-	   margin-left: -78px;
-	}
-	10% {
-	   transform: rotate(-10deg);
-	   margin-left: -88px;
-	}
-	20% {
-	 	transform: rotate(0deg);
-	 	margin-left: -78px;
-	}
-	30% {
-	   transform: rotate(10deg);
-	   margin-left: -68px;
-	}
-	40% {
-	 	transform: rotate(0deg);
-	 	margin-left: -78px;
-	}
+0% {
+transform: rotate(0deg);
+margin-left: -78px;
+}
+10% {
+transform: rotate(-10deg);
+margin-left: -88px;
+}
+20% {
+transform: rotate(0deg);
+margin-left: -78px;
+}
+30% {
+transform: rotate(10deg);
+margin-left: -68px;
+}
+40% {
+transform: rotate(0deg);
+margin-left: -78px;
+}
 }
 @keyframes WP3{ /*人動畫*/
-	0% {
-	   transform: rotate(10deg);
-	}
-	20% {
-	   transform: rotate(30deg);
-	   margin-left: -68px;
-	}
-	40% {
-	   transform: rotate(10deg);
-	   margin-left: -39px;
-	}
-	60% {
-	   transform: rotate(30deg);
-	   margin-left: -68px;
-	}
-	80% {
-	   transform: rotate(10deg);
-	   margin-left: -39px;
-	}
+0% {
+transform: rotate(10deg);
+}
+20% {
+transform: rotate(30deg);
+margin-left: -68px;
+}
+40% {
+transform: rotate(10deg);
+margin-left: -39px;
+}
+60% {
+transform: rotate(30deg);
+margin-left: -68px;
+}
+80% {
+transform: rotate(10deg);
+margin-left: -39px;
+}
 }
 @keyframes WP4{ /*人動畫*/
-	0% {
-	   transform: rotate(-2deg);
-	}
-	10% {
-	   transform: rotate(-10deg);
-	}
-	20% {
-	 	transform: rotate(-2deg);
-	}
-	30% {
-	   transform: rotate(-10deg);
-	}
-	40% {
-	 	transform: rotate(-2deg);
-	}
+0% {
+transform: rotate(-2deg);
 }
-
+10% {
+transform: rotate(-10deg);
+}
+20% {
+transform: rotate(-2deg);
+}
+30% {
+transform: rotate(-10deg);
+}
+40% {
+transform: rotate(-2deg);
+}
+}
 .S-2{ /*第二部分*/
-	width: 100%;
-	height: 550px;
-	/*background-size: cover;*/
-	/*background-size: contain;*/
-	/*background-image: url('images/B.png');*/
-	/*background-color:#E2E2E2;*/
-	display: inline-block;
-	overflow:hidden;
+width: 100%;
+height: 550px;
+/*background-size: cover;*/
+/*background-size: contain;*/
+/*background-image: url('images/B.png');*/
+/*background-color:#E2E2E2;*/
+display: inline-block;
+overflow:hidden;
 }
 .S2G{/*第二部分的小圖*/
-	width: 550px;
-	height: 250px;
-	/*background-color:#B8DDFF;*/
-	display: none;
-	margin-left:80px;
-	margin-top:140px;
-	float: left;
-	text-align:center;
-	position:absolute;
-	opacity: 0.8;
+width: 550px;
+height: 250px;
+/*background-color:#B8DDFF;*/
+display: none;
+margin-left:80px;
+margin-top:140px;
+float: left;
+text-align:center;
+position:absolute;
+opacity: 0.8;
 }
 .S2GC{/*第二部分的小圖的動畫*/
-	animation:S2GC 1.5s;/*一輪的時間與重複撥放*/
-	animation-direction: normal;/*方向*/
-	display: block;
+animation:S2GC 1.5s;/*一輪的時間與重複撥放*/
+animation-direction: normal;/*方向*/
+display: block;
 }
 @keyframes S2GC{ /*第二部分的小圖的動畫*/
-	0% {
-	   	margin-left:-550px;
-	}
-	100% {
-	    margin-left:80px;
-	}
+0% {
+margin-left:-550px;
+}
+100% {
+margin-left:80px;
+}
 }
 #S2W{/*第二部分的升學率*/
-	width: 100px;
-	height: 150px;
-	/*background-color: blue;*/
-	display: inline-block;
-	/*margin-right:70px;*/
-	margin-top:350px;
-	margin-left: 950px; 
-	font-size: 120px;
-	font-family:GenRyuMin-M;
-	/*font-weight:1000;*/
-	color:#cd0505;
-	letter-spacing:8px;
-	transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+width: 100px;
+height: 150px;
+/*background-color: blue;*/
+display: inline-block;
+/*margin-right:70px;*/
+margin-top:350px;
+margin-left: 950px;
+font-size: 120px;
+font-family:GenRyuMin-M;
+/*font-weight:1000;*/
+color:#cd0505;
+letter-spacing:8px;
+transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
 }
 .S2WC{/*升學率放大動畫*/
-	animation:S2WC 1s;/*一輪的時間與重複撥放*/
-	animation-delay: 0.0s !important; /*延誤時間*/
-	/*animation-direction: normal;*//*方向*/
+animation:S2WC 1s;/*一輪的時間與重複撥放*/
+animation-delay: 0.0s !important; /*延誤時間*/
+/*animation-direction: normal;*//*方向*/
 }
 @keyframes S2WC{ /*升學率的動畫*/
-	0% {
-	   	transform: scale(1);
-	}
-	90% {
-	   	transform: scale(2);
-	}
-	100% {
-	  transform: scale(1);
-	}
+0% {
+transform: scale(1);
+}
+90% {
+transform: scale(2);
+}
+100% {
+transform: scale(1);
+}
 }
 .S2W-1{/*107學年度的字*/
-	display:block;
-	/*margin-right:70px;*/
-	margin-top:150px;
-	margin-left: 800px; 
-	font-size: 30px;
-	font-family:GenRyuMin-M;
-	/*font-weight:100;*/
-	/*color:#cd0505;*/
-	position: absolute;
-	letter-spacing:25px;
+display:block;
+/*margin-right:70px;*/
+margin-top:150px;
+margin-left: 800px;
+font-size: 30px;
+font-family:GenRyuMin-M;
+/*font-weight:100;*/
+/*color:#cd0505;*/
+position: absolute;
+letter-spacing:25px;
 }
 .S2W-2{/*學士班註冊率的字*/
-	display:block;
-	/*margin-right:70px;*/
-	margin-top:225px;
-	margin-left: 667px; 
-	font-size: 60px;
-	font-family:GenRyuMin-M;
-	/*font-weight:100;*/
-	/*color:#cd0505;*/
-	position: absolute;
-	letter-spacing:35px;
+display:block;
+/*margin-right:70px;*/
+margin-top:225px;
+margin-left: 667px;
+font-size: 60px;
+font-family:GenRyuMin-M;
+/*font-weight:100;*/
+/*color:#cd0505;*/
+position: absolute;
+letter-spacing:35px;
 }
 .S2W-2-1{/*註冊率底線*/
-	display:inline-block;
-	background-color: #e0e0e0;
-	position: absolute;
-	margin-top:270px;
-	margin-left:350px; 
-	width: 300px;
-	height: 30px;
-	z-index: -1;
+display:inline-block;
+background-color: #e0e0e0;
+position: absolute;
+margin-top:270px;
+margin-left:350px;
+width: 300px;
+height: 30px;
+z-index: -1;
 }
 .S2W-3{/*%%%*/
-	display:none;
-	font-family:GenRyuMin-M;
-	position: absolute;
-	margin-top:408px;
-	margin-left:230px; 
-	font-size:55px;
-
+display:none;
+font-family:GenRyuMin-M;
+position: absolute;
+margin-top:408px;
+margin-left:230px;
+font-size:55px;
 }
 .S2H{/*第二部分的大頭*/
-	overflow:hidden !important;
-	width: 300px;
-	height: 500px;
-	/*background-color: red;*/
-	float: right;
-	/*margin-right:70px;*/
-	margin-top:20px;
-	/*margin-bottom: 90px;*/
-	display:none;
-	transform: rotate(-18deg);
-	margin-right:-60px;
-	
+overflow:hidden !important;
+width: 300px;
+height: 500px;
+/*background-color: red;*/
+float: right;
+/*margin-right:70px;*/
+margin-top:20px;
+/*margin-bottom: 90px;*/
+display:none;
+transform: rotate(-18deg);
+margin-right:-60px;
+
 }
 .S2H-C{ /*頭的動畫*/
-	animation:S2HC 1.5s;/*一輪的時間與重複撥放*/
-	animation-delay: 0s !important; /*延誤時間*/
-	animation-direction: normal;/*方向*/
-	/*transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;*/
-	display: inline-block;
+animation:S2HC 1.5s;/*一輪的時間與重複撥放*/
+animation-delay: 0s !important; /*延誤時間*/
+animation-direction: normal;/*方向*/
+/*transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;*/
+display: inline-block;
 }
-
-
 @keyframes S2HC{ /*大頭的動畫*/
-	0% {
-	   	margin-right:-350px;
-	}
-	90% {
-	   	margin-right:-350px;
-	}
-	100% {
-	    margin-right:-60px;
-	}
+0% {
+margin-right:-350px;
 }
-
+90% {
+margin-right:-350px;
+}
+100% {
+margin-right:-60px;
+}
+}
 .S-3{ /*第三部分*/
-	width: 100%;
-	height: 950px ;
-	/*background-size: cover;*/
-	/*background-size: contain;*/
-	/*background-image: url('images/B.png');*/
-	/*background-color:#E2E2E2;*/
-	display: inline-block;
-	/*overflow:hidden;*/
-	text-align:center;
+width: 100%;
+height: 950px ;
+/*background-size: cover;*/
+/*background-size: contain;*/
+/*background-image: url('images/B.png');*/
+/*background-color:#E2E2E2;*/
+display: inline-block;
+/*overflow:hidden;*/
+text-align:center;
 }
 .S3G{/*長條圖*/
-	width: 100%;
-	height: 220px;
-	/*background-color: #e1fbdd;*/
-	display: inline-block;
-	margin-top:0px;
-	text-align: center;
-	position: relative;
-	z-index: -3;
-	/*background-image: url("images/BBB.png");*/
+width: 100%;
+height: 220px;
+/*background-color: #e1fbdd;*/
+display: inline-block;
+margin-top:0px;
+text-align: center;
+position: relative;
+z-index: -3;
+/*background-image: url("images/BBB.png");*/
 }
 .G3W{ /*所有的字的屬性*/
-	display:inline-block; 
-	width: 80px;
-	height: auto;
-	/*background-color: red;*/
-	overflow:hidden;
-	/*display: none;*/
-	overflow: initial;
+display:inline-block;
+width: 80px;
+height: auto;
+/*background-color: red;*/
+overflow:hidden;
+/*display: none;*/
+overflow: initial;
 }
 .S3W{
-	position: absolute;
-	width: 100%;
-	height: 200px;
-	/*background-color: red;*/
-	margin-top: -230px;
+position: absolute;
+width: 100%;
+height: 200px;
+/*background-color: red;*/
+margin-top: -230px;
 }
 .LHB{
-	opacity: 0.4;
+opacity: 0.4;
 }
 .BossH{/*光正頭*/
-	width: 240px;
-	height: 250px;
-	/*background-color:blue;*/
-	display: none;
-	margin-top:-185px;
-	transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-	z-index: 99;
-	position:absolute;
-	margin-left: -120px;
-	opacity: 1;
+width: 240px;
+height: 250px;
+/*background-color:blue;*/
+display: none;
+margin-top:-185px;
+transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+z-index: 99;
+position:absolute;
+margin-left: -120px;
+opacity: 1;
 }
 .BossHC{/*光正頭*/
-	display: flex;
-	margin-top:-185px;
-	transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-	animation:BossH 1s;/*一輪的時間與重複撥放*/
-	/*animation-delay: 0s !important;*/ /*延誤時間*/
-	cursor: pointer;
-
+display: flex;
+margin-top:-185px;
+transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+animation:BossH 1s;/*一輪的時間與重複撥放*/
+/*animation-delay: 0s !important;*/ /*延誤時間*/
+cursor: pointer;
 }
 @keyframes BossH{ /*光正頭的動畫*/
-	0% {
-	   	margin-top:-80px;
-	   	opacity: 0;
-	}
-	100% {
-	    margin-top:-185px;
-	    opacity: 1;
-	}
+0% {
+margin-top:-80px;
+opacity: 0;
+}
+100% {
+margin-top:-185px;
+opacity: 1;
+}
 }
 .No{
-	position:absolute;
-	font-size: 45px;
-	z-index: 98;
-	color: #FFFFFF;
+position:absolute;
+font-size: 45px;
+z-index: 98;
+color: #FFFFFF;
 }
 .No-1{
-	left: 50%;
-	margin-left:-75px; 
-	margin-top:-260px; 
-	display: none;
+left: 50%;
+margin-left:-75px;
+margin-top:-260px;
+display: none;
 }
 .No-2{
-	left: 50%;
-	margin-left:-75px; 
-	margin-top:130px;  
-	display: none;
+left: 50%;
+margin-left:-75px;
+margin-top:130px;
+display: none;
 }
 .No-3{
-	left: 50%;
-	margin-left:-75px; 
-	margin-top:-260px;  
-	display: none;
+left: 50%;
+margin-left:-75px;
+margin-top:-260px;
+display: none;
 }
 .No-4{
-	left: 50%;
-	margin-left:-75px; 
-	margin-top:130px;  
-	display: none;
+left: 50%;
+margin-left:-75px;
+margin-top:130px;
+display: none;
 }
 .NoC1{
-  animation: C1 6s infinite linear;
+animation: C1 6s infinite linear;
 }
 .NoC2{
-  animation: C2 6s infinite linear;
+animation: C2 6s infinite linear;
 }
 .NoC3{
-  animation: C3 4s infinite linear;
+animation: C3 4s infinite linear;
 }
 .NoC4{
-  animation: C4 4s infinite linear;
+animation: C4 4s infinite linear;
 }
-
-
 @keyframes C1{
 from{
 transform: translate(50%, 230px)
@@ -793,292 +860,290 @@ translate(50%,50%)
 }
 }
 .S3WG{/*音樂廳動畫*/
-	animation:S3WG 2s ; /*動畫名稱*/
+animation:S3WG 2s ; /*動畫名稱*/
 }
 @keyframes S3WG{ /*音樂廳動畫*/
-	0% {
-			opacity: 0;
-	}
-	100% {
-	    	opacity: 1;
-	}
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
 }
 .S3G-A,.S3G-C{
-	display: inline-block;
-	width: 300px;
-	height: 210px;
-	background-color:#aacfd0;
-	margin-top: -550px;
-	padding: 20px;
-	 border-radius:20px;
-	 z-index: -2;
-	 cursor: pointer;
-	 display: none;
-	 margin-right: 50px;
-	 /*pointer-events: none;*//*解決滑鼠移入移出閃爍問題*/
+display: inline-block;
+width: 300px;
+height: 210px;
+background-color:#aacfd0;
+margin-top: -550px;
+padding: 20px;
+border-radius:20px;
+z-index: -2;
+cursor: pointer;
+display: none;
+margin-right: 50px;
+/*pointer-events: none;*//*解決滑鼠移入移出閃爍問題*/
 }
 .S3G-B,.S3G-D{
-	display: inline-block;
-	width:300px;
-	height:210px;
-	background-color: #fc9d9a;
-	margin-top: 400px;
-	margin-right: 50px;
-	padding: 20px;
-	 border-radius:20px;
-	 cursor: pointer;
-	 display: none;
-	 /*pointer-events: none;*//*解決滑鼠移入移出閃爍問題*/
+display: inline-block;
+width:300px;
+height:210px;
+background-color: #fc9d9a;
+margin-top: 400px;
+margin-right: 50px;
+padding: 20px;
+border-radius:20px;
+cursor: pointer;
+display: none;
+/*pointer-events: none;*//*解決滑鼠移入移出閃爍問題*/
 }
 .S3WW{/*字動畫*/
-	 animation:S3WW 2s ; /*動畫名稱*/
+animation:S3WW 2s ; /*動畫名稱*/
 }
 @keyframes S3WW{ /*字動畫*/
-	0% {
-			opacity: 0;
-	}
-	100% {
-	    	opacity: 1;
-	}
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
 }
 .S3WW1{/*各個音樂廳名稱*/
-	display: none;
-	height: 150px;
-	margin-top:-200px;
-	position: absolute;
-	font-size: 40px;
-	font-family: GenRyuMin-M;
-	margin-left: 250px;
+display: none;
+height: 150px;
+margin-top:-200px;
+position: absolute;
+font-size: 40px;
+font-family: GenRyuMin-M;
+margin-left: 250px;
 }
 .S3WW2{/*各個音樂廳名稱*/
-	display:none;
-	height: auto;
-	margin-top:410px;
-	position: absolute;
-	font-size: 40px;
-	font-family: GenRyuMin-M;
-	margin-left: -40px;
+display:none;
+height: auto;
+margin-top:410px;
+position: absolute;
+font-size: 40px;
+font-family: GenRyuMin-M;
+margin-left: -40px;
 }
 .S3WW3{/*各個音樂廳名稱*/
-	display: none;
-	height:auto;
-	margin-top:-200px;
-	position: absolute;
-	font-size: 40px;
-	font-family: GenRyuMin-M;
-	margin-left: 285px;
+display: none;
+height:auto;
+margin-top:-200px;
+position: absolute;
+font-size: 40px;
+font-family: GenRyuMin-M;
+margin-left: 285px;
 }
 .S3WW4{/*各個音樂廳名稱*/
-	display: none;
-	height: auto;
-	margin-top:-200px;
-	position: absolute;
-	font-size: 40px;
-	font-family: GenRyuMin-M;
-	margin-left: 285px;
+display: none;
+height: auto;
+margin-top:-200px;
+position: absolute;
+font-size: 40px;
+font-family: GenRyuMin-M;
+margin-left: 285px;
 }
 .S3P1{
-	width: 300px;
-	height: 100px;
-	/*background-color: red;*/
-	position: absolute;
-	margin-top: 10px;
-	margin-left: -60px;
-	display: none;
+width: 300px;
+height: 100px;
+/*background-color: red;*/
+position: absolute;
+margin-top: 10px;
+margin-left: -60px;
+display: none;
 }
 .S3P2{
-	width: 290px;
-	height: 100px;
-	/*background-color: red;*/
-	position: absolute;
-	margin-top:200px;
-	margin-left: -4px;
-	z-index: -1;
-	display: none;
-	transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+width: 290px;
+height: 100px;
+/*background-color: red;*/
+position: absolute;
+margin-top:200px;
+margin-left: -4px;
+z-index: -1;
+display: none;
+transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
 }
 .S3P3{
-	width: 250px;
-	height: 100px;
-	/*background-color: red;*/
-	position: absolute;
-	margin-top:20px;
-	margin-left: 35px;
-	z-index: -1;
-	display: none;
-	transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+width: 250px;
+height: 100px;
+/*background-color: red;*/
+position: absolute;
+margin-top:20px;
+margin-left: 35px;
+z-index: -1;
+display: none;
+transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
 }
 .S3P4{
-	width: 300px;
-	height: 100px;
-	/*background-color: red;*/
-	position: absolute;
-	margin-top:-500px;
-	margin-left:80px;
-	z-index: -1;
-	display: none;
-	transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+width: 300px;
+height: 100px;
+/*background-color: red;*/
+position: absolute;
+margin-top:-500px;
+margin-left:80px;
+z-index: -1;
+display: none;
+transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
 }
 .S3CP1{
-    animation: S3CP1 1s ; /*動畫名稱*/
+animation: S3CP1 1s ; /*動畫名稱*/
 }
 .S3CP2{
-    animation: S3CP2 1s ; /*動畫名稱*/
+animation: S3CP2 1s ; /*動畫名稱*/
 }
 .S3CP3{
-    animation: S3CP3 1s ; /*動畫名稱*/
+animation: S3CP3 1s ; /*動畫名稱*/
 }
 .S3CP4{
-    animation: S3CP4 1s ; /*動畫名稱*/
+animation: S3CP4 1s ; /*動畫名稱*/
 }
 @keyframes S3CP1{ /*人物進場動畫*/
-	0% {
-	   	margin-left:-300px;
-	   	opacity: 0;
-	}
-	100% {
-	    margin-left:-60px;
-	    opacity: 1;
-	}
+0% {
+margin-left:-300px;
+opacity: 0;
+}
+100% {
+margin-left:-60px;
+opacity: 1;
+}
 }
 @keyframes S3CP2{ /*人物進場動畫*/
-	0% {
-	   	margin-top:400px;
-	   	opacity: 0;
-	}
-	100% {
-	    margin-top:200px;
-	    opacity: 1;
-	}
+0% {
+margin-top:400px;
+opacity: 0;
+}
+100% {
+margin-top:200px;
+opacity: 1;
+}
 }
 @keyframes S3CP3{ /*人物進場動畫*/
-	0% {
-	   	margin-left:0px;
-	   	opacity: 0;
-	}
-	100% {
-	    margin-left:35px;
-	    opacity: 1;
-	}
+0% {
+margin-left:0px;
+opacity: 0;
+}
+100% {
+margin-left:35px;
+opacity: 1;
+}
 }
 @keyframes S3CP4{ /*人物進場動畫*/
-	0% {
-	   	margin-top:-400px;
-	   	opacity: 0;
-	}
-	100% {
-	    margin-top:-500px;
-	    opacity: 1;
-	}
+0% {
+margin-top:-400px;
+opacity: 0;
+}
+100% {
+margin-top:-500px;
+opacity: 1;
+}
 }
 .RY{/*跳起來後面的圈圈*/
-	width: 250px;
-	height: 250px;
-	border-radius: 200px;
-	background-color:#fff79a;
-	position: absolute;
-	margin-top: 30px;
-	margin-left: -80px;
-	z-index: -1;
-	animation:J 1s ease ; /*動畫名稱*/
-	display: none;
+width: 250px;
+height: 250px;
+border-radius: 200px;
+background-color:#fff79a;
+position: absolute;
+margin-top: 30px;
+margin-left: -80px;
+z-index: -1;
+animation:J 1s ease ; /*動畫名稱*/
+display: none;
 }
 @keyframes J{ /*跳起來的動畫*/
-	0% {
-		margin-top: 300px;
-	}
-	50%{
-		margin-top: 10px;
-	}
-	100% {
-	    margin-top: 30px;
-	}
+0% {
+margin-top: 300px;
+}
+50%{
+margin-top: 10px;
+}
+100% {
+margin-top: 30px;
+}
 }
 .RY2{/*跳起來後面的圈圈*/
-	width: 250px;
-	height: 250px;
-	border-radius: 200px;
-	background-color:#fff79a;
-	position: absolute;
-	margin-top: 90px;
-	margin-left: -230px;
-	z-index: -1;
-	animation:J2 1s ease ; /*動畫名稱*/
-	display: none;
+width: 250px;
+height: 250px;
+border-radius: 200px;
+background-color:#fff79a;
+position: absolute;
+margin-top: 90px;
+margin-left: -230px;
+z-index: -1;
+animation:J2 1s ease ; /*動畫名稱*/
+display: none;
 }
 @keyframes J2{ /*跳起來的動畫*/
-	0% {
-		margin-top: 300px;
-	}
-	50%{
-		margin-top: 60px;
-	}
-	100% {
-	    margin-top: 90px;
-	}
+0% {
+margin-top: 300px;
 }
-
+50%{
+margin-top: 60px;
+}
+100% {
+margin-top: 90px;
+}
+}
 .GG1,.GG2,.GG3,.GG4 {
-   	width: 260px;
-    height: 174px;
-    background-color: rgba(0, 0, 0, .50);
-    color: #FFFFFF;
-    position: absolute;
-    margin-top: -174px;
-    /*margin-left: -300px;*/
-    text-align: center;
-	padding-top:80px;
-	animation:GG 1s;
-	display: none;
+width: 260px;
+height: 174px;
+background-color: rgba(0, 0, 0, .50);
+color: #FFFFFF;
+position: absolute;
+margin-top: -174px;
+/*margin-left: -300px;*/
+text-align: center;
+padding-top:80px;
+animation:GG 1s;
+display: none;
 }
 @keyframes GG{ /*動畫*/
-	0% {
-	   	opacity: 0;
-	}
-	100% {
-	    opacity: 1;
-	}
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
 }
 .footer{
-	background-color: #000000;
-	height: 150px;
-	overflow: hidden;
-	color: #FFFFFF;
-	text-align: center;
-	margin-top: -75px;
+background-color: #000000;
+height: 150px;
+overflow: hidden;
+color: #FFFFFF;
+text-align: center;
+margin-top: -75px;
 }
 .footer-logo{
-	/*width: 150px;*/
-	margin: 0px auto;
-	margin-top: 0px; 
-	margin-bottom: 10px;
-	font-size: 20px;
+/*width: 150px;*/
+margin: 0px auto;
+margin-top: 0px;
+margin-bottom: 10px;
+font-size: 20px;
 }
 .FW{
-	display: inline-block;
-	/*width: 100%;*/
-	text-align: center;
-	margin-top: 25px;
-	font-size: 10px;
+display: inline-block;
+/*width: 100%;*/
+text-align: center;
+margin-top: 25px;
+font-size: 10px;
 }
-
 .F{
-	width: 550px;
-	margin-top: -115px;
-	float: right;
-	margin-right: -50px;
-	/*transform: rotate(20deg);*/
+width: 550px;
+margin-top: -115px;
+float: right;
+margin-right: -50px;
+/*transform: rotate(20deg);*/
 }
 .FF{
-	animation:F 10s infinite linear;
+animation:F 10s infinite linear;
 }
 @keyframes F{ /*動畫*/
-	0% {
-	   	transform: rotate(0deg);
-	   	/*margin-right: -50px;*/
-	}
-	100%{
-		transform: rotate(-360deg);
-			/*margin-right: -50px;*/
-	}
+0% {
+transform: rotate(0deg);
+/*margin-right: -50px;*/
+}
+100%{
+transform: rotate(-360deg);
+/*margin-right: -50px;*/
+}
 }
