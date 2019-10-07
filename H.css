@@ -143,16 +143,17 @@ position: relative;
 }
 .P-1{/*架上的譜*/
 width: 85px;
-height: 50px;
+height: auto;
 display: inline-block;
 /*background-color:green;*/
 position:absolute;
-margin-top: -438px;
-margin-left: 60px;
+margin-top: 10px;
+margin-left: -155px;
 cursor: pointer;
 z-index: 92;
+
 }
-.P-1:hover{
+.P-1 img:hover{
 animation: jump; /*動畫名稱*/
 animation-duration: 0.4s;/*動畫時間*/
 animation-iteration-count:infinite;/*重複播放*/
@@ -173,14 +174,14 @@ animation-duration: 0.5s;/*動畫時間*/
 }
 @keyframes jump{ /*彈跳動畫*/
 0%{
-margin-top: -438px;
+margin-top: 5px;
 }
 50%{
-margin-top: -450px;
-border-bottom-right-radius:25px;
+margin-top: -5px;
+
 }
 100%{
-margin-top: -438px;
+margin-top: 5px;
 }
 }
 #T-title{ /*中原大學4個大字*/
@@ -923,11 +924,11 @@ opacity: 1;
 .S3WW1{/*各個音樂廳名稱*/
 display: none;
 height: 150px;
-margin-top:-200px;
+margin-top:-100px;
 position: absolute;
 font-size: 40px;
 font-family: GenRyuMin-M;
-margin-left: 250px;
+/*margin-left: 250px;*/
 }
 .S3WW2{/*各個音樂廳名稱*/
 display:none;
@@ -941,20 +942,20 @@ margin-left: -40px;
 .S3WW3{/*各個音樂廳名稱*/
 display: none;
 height:auto;
-margin-top:-200px;
+margin-top:-100px;
 position: absolute;
 font-size: 40px;
 font-family: GenRyuMin-M;
-margin-left: 285px;
+/*margin-left: 285px;*/
 }
 .S3WW4{/*各個音樂廳名稱*/
 display: none;
 height: auto;
-margin-top:-200px;
+margin-top:400px;
 position: absolute;
 font-size: 40px;
 font-family: GenRyuMin-M;
-margin-left: 285px;
+margin-left: -40px;
 }
 .S3P1{
 width: 300px;
@@ -962,7 +963,7 @@ height: 100px;
 /*background-color: red;*/
 position: absolute;
 margin-top: 10px;
-margin-left: -60px;
+margin-left: -160px;
 display: none;
 }
 .S3P2{
@@ -981,7 +982,7 @@ width: 250px;
 height: 100px;
 /*background-color: red;*/
 position: absolute;
-margin-top:20px;
+margin-top:-80px;
 margin-left: 35px;
 z-index: -1;
 display: none;
@@ -993,7 +994,7 @@ height: 100px;
 /*background-color: red;*/
 position: absolute;
 margin-top:-500px;
-margin-left:80px;
+margin-left:50px;
 z-index: -1;
 display: none;
 transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
@@ -1056,8 +1057,8 @@ height: 250px;
 border-radius: 200px;
 background-color:#fff79a;
 position: absolute;
-margin-top: 30px;
-margin-left: -80px;
+margin-top: 150px;
+margin-left: -300px;
 z-index: -1;
 animation:J 1s ease ; /*動畫名稱*/
 display: none;
@@ -1067,10 +1068,10 @@ display: none;
 margin-top: 300px;
 }
 50%{
-margin-top: 10px;
+margin-top: 100px;
 }
 100% {
-margin-top: 30px;
+margin-top: 150px;
 }
 }
 .RY2{/*跳起來後面的圈圈*/
